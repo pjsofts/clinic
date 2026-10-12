@@ -63,7 +63,7 @@ p { margin: 0 0 1em; }
   display: inline-flex; align-items: center; justify-content: center; gap: .5em;
   padding: .7em 1.5em; border-radius: var(--btn-radius); border: 2px solid transparent;
   font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
-  transition: background .2s, color .2s, border-color .2s, transform .1s;
+  transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s, filter .2s;
 }
 .btn:active { transform: translateY(1px); }
 .btn-primary { background: var(--primary); color: var(--on-primary); }
@@ -275,3 +275,27 @@ textarea { resize: vertical; }
   font: inherit; background: #fff; color: #1d1d1f;
 }
 .theme-bar a { color: #fff; font-size: .85rem; }
+
+/* ---------- Micro-interactions (all themes) ---------- */
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.card { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.services .card:hover,
+.therapists .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px color-mix(in srgb, var(--primary) 16%, transparent); }
+.service { border-top: 3px solid var(--primary-soft); }
+.service:hover { border-top-color: var(--primary); }
+
+/* The heart in the hero gently "breathes". */
+.art-heart, .art-leaf { transform-box: fill-box; transform-origin: center; animation: breathe 6s ease-in-out infinite; }
+@keyframes breathe { 50% { transform: scale(1.05); } }
+
+/* Sections fade in as they scroll into view (class added by app.js, so no-JS visitors see everything). */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+  .btn:hover, .card:hover { transform: none !important; }
+}

@@ -118,6 +118,26 @@ async function loadTherapists() {
 
 loadTherapists();
 
+// ---------- Gentle fade-in on scroll ----------
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      }
+    },
+    { rootMargin: '0px 0px -60px 0px' },
+  );
+  document.querySelectorAll('.section-head, .services, .filters, .steps, .request-wrap').forEach((el) => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+}
+
 // ---------- Request form ----------
 
 const statusEl = document.getElementById('form-status');

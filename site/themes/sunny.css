@@ -7,13 +7,13 @@
   --surface: #ffffff;
   --text: #3b2a24;
   --muted: #7a6158;
-  --primary: #e2604a;
-  --primary-hover: #c94e39;
+  --primary: #e07a5f;
+  --primary-hover: #cc6649;
   --primary-soft: #ffe0d6;
   --accent: #2f9e8f;
   --border: #f3dccb;
   --radius: 28px;
-  --shadow: 0 12px 0 -6px #f6d2bd;
+  --shadow: 0 14px 34px rgba(224, 122, 95, .14);
   --header-bg: rgba(255, 248, 241, .94);
   --hero-bg:
     radial-gradient(circle at 10% 20%, #ffd9a8 0 120px, transparent 121px),
@@ -33,8 +33,8 @@
   display: inline-block; background: #fff; color: var(--accent);
   padding: .2em 1em; border-radius: 999px; box-shadow: 0 4px 0 #f3dccb;
 }
-.btn-primary { box-shadow: 0 5px 0 #b8432f; }
-.btn-primary:active { box-shadow: 0 2px 0 #b8432f; transform: translateY(3px); }
+.btn-primary { box-shadow: 0 5px 0 #c25d43; }
+.btn-primary:active { box-shadow: 0 2px 0 #c25d43; transform: translateY(3px); }
 .card { border: 2px solid var(--border); }
 .services .card:nth-child(1) .service-icon { background: #ffe0d6; }
 .services .card:nth-child(2) .service-icon { background: #d8f1ec; }

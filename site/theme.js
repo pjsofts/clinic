@@ -11,6 +11,12 @@ window.CLINIC_THEMES = [
   { id: 'autumn', name: 'پاییز', description: 'آجری، زیتونی و خردلی؛ گرم، خاکی و صمیمی' },
   { id: 'medical', name: 'آبی پزشکی', description: 'آبی و سفید روشن؛ تمیز، آشنا و کاملاً حرفه‌ای' },
   { id: 'midnight', name: 'نیمه‌شب و نعناع', description: 'سرمه‌ای تیره با سبز نعناعی؛ لوکس، جسور و متمایز' },
+  { id: 'moonlight', name: 'نور مهتاب', description: 'آبی نقره‌ای، سفید گرم و طلایی کم‌رنگ؛ بسیار آرام و شبیه اسپا' },
+  { id: 'garden', name: 'باغ ایرانی', description: 'آجری ملایم، سبز مریمی، عاجی و فیروزه‌ای کدر؛ فرهنگی و گرم' },
+  { id: 'sky', name: 'ابر و آسمان', description: 'آبی آسمانی، سفید ابری و یاسی کم‌رنگ؛ سبک و پرهوا' },
+  { id: 'matcha', name: 'چای سبز', description: 'سبز ماچا، بژ گرم و طلایی کدر؛ آرامش ذن و مدرن' },
+  { id: 'candle', name: 'شمع و سایه', description: 'زغالی گرم، کهربایی و کرم؛ حس صمیمی اتاق درمان در شب' },
+  { id: 'kids', name: 'کودکانه نرم', description: 'هلویی، نعناعی و یاسی پاستلی؛ بازیگوش اما حرفه‌ای، برای کودک و نوجوان' },
 ];
 
 (function () {
@@ -21,8 +27,8 @@ window.CLINIC_THEMES = [
   if (ids.indexOf(theme) === -1) theme = 'calm';
 
   document.documentElement.dataset.theme = theme;
-  // "calm" is the base stylesheet; other themes layer on top of it.
-  if (theme !== 'calm') document.write('<link rel="stylesheet" href="themes/' + theme + '.css">');
+  // Each theme layers its own stylesheet on top of the base styles.css.
+  document.write('<link rel="stylesheet" href="themes/' + theme + '.css">');
 
   if (!preview) return;
 

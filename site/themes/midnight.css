@@ -1,12 +1,12 @@
 /* نیمه‌شب و نعناع — deep navy with fresh mint */
 :root {
-  --bg: #0b1a24;
-  --bg-alt: #0f222e;
-  --surface: #13293a;
+  --bg: #08141d;
+  --bg-alt: #0b1c27;
+  --surface: #102434;
   --text: #e6f2f0;
   --muted: #94aeb3;
-  --primary: #4fd1b5;
-  --primary-hover: #74e0c8;
+  --primary: #3cc4b0;
+  --primary-hover: #5fd6c4;
   --primary-soft: #183a3f;
   --on-primary: #06231d;
   --accent: #f4c97a;
@@ -14,14 +14,14 @@
   --danger: #ff8f87;
   --success: #6ee7b7;
   --shadow: 0 12px 34px rgba(0, 0, 0, .35);
-  --header-bg: rgba(11, 26, 36, .88);
+  --header-bg: rgba(8, 20, 29, .88);
   --hero-bg:
-    radial-gradient(circle at 18% 35%, rgba(79, 209, 181, .22), transparent 42%),
+    radial-gradient(circle at 18% 35%, rgba(60, 196, 176, .24), transparent 42%),
     radial-gradient(circle at 90% 10%, rgba(244, 201, 122, .1), transparent 35%),
     var(--bg);
   --art-leaf: #f4c97a;
   --notice-bg: #22293a;
-  --footer-bg: #07131b;
+  --footer-bg: #050e15;
   --footer-text: #94aeb3;
   --footer-strong: #e6f2f0;
   --input-bg: #0e2130;
@@ -36,3 +36,4 @@ body { color-scheme: dark; }
 .chip { background: transparent; color: var(--text); }
 .notice a { color: var(--accent); }
 .eyebrow { color: var(--accent); }
+.hero-art svg { filter: drop-shadow(0 0 70px rgba(60, 196, 176, .3)); }

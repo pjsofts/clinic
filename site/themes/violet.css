@@ -25,12 +25,12 @@
 }
 
 .hero h1 { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.btn-primary, .step-num, .chip[aria-pressed="true"] { background: var(--gradient); border-color: transparent; }
-.btn-primary:hover { filter: brightness(1.08); background: var(--gradient); }
+.hero .btn-primary { background: var(--gradient); }
+.step-num, .chip[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); }
+.hero .btn-primary:hover { filter: brightness(1.08); background: var(--gradient); }
 .art-bg { fill: #ebe3ff; }
 .art-heart { fill: #7b55dc; }
 .art-ring { stroke: var(--accent); }
-.service-icon { background: linear-gradient(135deg, #ebe3ff, #fde3f1); }
-.avatar { background: linear-gradient(135deg, #ebe3ff, #fde3f1); }
+.service-icon { background: var(--primary-soft); }
+.avatar { background: var(--primary-soft); }
 .card { border-color: transparent; }
-.site-footer { background: linear-gradient(135deg, #24163f, #3a1f4f); }

@@ -35,12 +35,12 @@ The site finds the API through `site/config.js` (`CLINIC_API_URL`).
 
 ## Themes
 
-Eleven designs share the same content and form: `calm` (default), `night`, `turquoise`, `sunny`, `minimal`, `rose`, `ocean`, `violet`, `autumn`, `medical`, `midnight`.
+Seventeen designs share the same content and form (ids listed in `site/theme.js`; `calm` is the default).
 
 - Gallery to send to the clinic: https://pjsofts.github.io/clinic/themes.html
 - Preview one directly: `https://pjsofts.github.io/clinic/?theme=night` (preview links show a theme switcher bar).
 - Pick the final theme: set `CLINIC_DEFAULT_THEME` in `site/config.js`.
-- Theme list/descriptions: `site/theme.js`. Each theme is `site/themes/<id>.css`, overriding the tokens at the top
+- Theme list/descriptions: `site/theme.js`. Each theme is `site/themes/<id>.css` (calm included), overriding the tokens at the top
   of `site/styles.css`. Gallery thumbnails live in `site/themes/previews/`.
 
 ## Admin page

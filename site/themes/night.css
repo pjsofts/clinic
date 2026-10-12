@@ -1,34 +1,34 @@
 /* شب آرام — dark, lavender accents */
 :root {
-  --bg: #12141f;
-  --bg-alt: #181b2a;
-  --surface: #1e2234;
-  --text: #e8e6f2;
-  --muted: #a3a2b8;
+  --bg: #13112a;
+  --bg-alt: #19163a;
+  --surface: #211d45;
+  --text: #f1effa;
+  --muted: #c3c0dc;
   --primary: #a99cf0;
   --primary-hover: #bdb3f5;
   --primary-soft: #2b2a4a;
   --on-primary: #12141f;
   --accent: #f0b48a;
-  --border: #2e3248;
+  --border: #332d61;
   --danger: #ff8a80;
   --success: #7fd6a4;
   --shadow: 0 10px 30px rgba(0, 0, 0, .35);
-  --header-bg: rgba(18, 20, 31, .85);
+  --header-bg: rgba(19, 17, 42, .86);
   --hero-bg:
     radial-gradient(circle at 15% 30%, rgba(169, 156, 240, .22), transparent 40%),
     radial-gradient(circle at 85% 10%, rgba(240, 180, 138, .12), transparent 35%);
   --art-leaf: #f0b48a;
   --notice-bg: #2a2333;
-  --footer-bg: #0b0c14;
-  --footer-text: #a3a2b8;
+  --footer-bg: #0c0a1f;
+  --footer-text: #c3c0dc;
   --footer-strong: #e8e6f2;
-  --input-bg: #161929;
+  --input-bg: #1a1738;
 }
 
 body { color-scheme: dark; }
 .nav-toggle span { background: var(--text); }
-.card { border-color: transparent; background: linear-gradient(180deg, #22263a, var(--surface)); }
+.card { border-color: transparent; background: linear-gradient(180deg, #2a2560, var(--surface)); }
 .therapist .avatar { background: var(--primary-soft); color: var(--primary); }
 .art-heart { filter: drop-shadow(0 0 30px rgba(169, 156, 240, .5)); }
 .art-ring { stroke: var(--accent); }
@@ -40,3 +40,5 @@ body { color-scheme: dark; }
 .chip { background: transparent; color: var(--text); }
 .notice a { color: var(--accent); }
 .service-icon { background: var(--primary-soft); }
+.hero-art svg { filter: drop-shadow(0 0 60px rgba(169, 156, 240, .35)); }
+.art-bg { fill: #231f4d; }

@@ -5,17 +5,19 @@
   --surface: #ffffff;
   --text: #3d2330;
   --muted: #7d5f6a;
-  --primary: #b85c75;
-  --primary-hover: #9e4a62;
-  --primary-soft: #f6dde3;
+  --primary: #a8687a;
+  --primary-hover: #915566;
+  --primary-soft: #f3e1e4;
   --accent: #6f9a7a;
   --border: #efd6db;
   --shadow: 0 10px 30px rgba(184, 92, 117, .12);
   --header-bg: rgba(253, 246, 246, .92);
   --hero-bg:
-    radial-gradient(circle at 12% 25%, #f6cfd8 0, transparent 38%),
-    radial-gradient(circle at 88% 80%, #dbe9dd 0, transparent 35%),
-    linear-gradient(180deg, #fbeef0, var(--bg));
+    radial-gradient(ellipse 40% 55% at 10% 25%, rgba(232, 180, 192, .55), transparent 70%),
+    radial-gradient(ellipse 30% 40% at 30% 75%, rgba(246, 214, 200, .6), transparent 70%),
+    radial-gradient(ellipse 35% 50% at 88% 75%, rgba(196, 220, 200, .55), transparent 70%),
+    radial-gradient(ellipse 25% 35% at 70% 10%, rgba(222, 200, 226, .5), transparent 70%),
+    linear-gradient(180deg, #fbf0f1, var(--bg));
   --art-leaf: #8fb79a;
   --notice-bg: #eef5ef;
   --footer-bg: #3d2330;
@@ -23,11 +25,11 @@
   --footer-strong: #ffe4ea;
 }
 
-.btn-primary { background: linear-gradient(135deg, #c96d86, #9e4a62); }
-.btn-primary:hover { background: linear-gradient(135deg, #b85c75, #8a3e55); }
-.art-bg { fill: #f6dde3; }
+.btn-primary { background: linear-gradient(135deg, #b87a8b, #915566); }
+.btn-primary:hover { background: linear-gradient(135deg, #a8687a, #7f4858); }
+.art-bg { fill: #f3e1e4; fill-opacity: .8; }
 .art-ring { stroke: var(--accent); }
 .eyebrow { color: var(--accent); }
 .therapist .role { color: var(--accent); }
-.tags li { background: var(--primary-soft); color: #7a3a4d; }
-.step-num { background: linear-gradient(135deg, #c96d86, #9e4a62); }
+.tags li { background: var(--primary-soft); color: #7a4655; }
+.step-num { background: linear-gradient(135deg, #b87a8b, #915566); }

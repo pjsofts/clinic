@@ -1,19 +1,19 @@
 /* آبی پزشکی — crisp clinical blue and white */
 :root {
-  --bg: #ffffff;
-  --bg-alt: #f1f6fd;
+  --bg: #fdfcf9;
+  --bg-alt: #f2f5fa;
   --surface: #ffffff;
   --text: #0f1f3d;
   --muted: #56647d;
-  --primary: #1f5fd6;
-  --primary-hover: #174bb0;
-  --primary-soft: #e3edfc;
+  --primary: #3a6ec4;
+  --primary-hover: #2f5ba6;
+  --primary-soft: #e6eefa;
   --accent: #0ea5d9;
   --border: #dde6f3;
   --radius: 14px;
   --shadow: 0 6px 24px rgba(31, 95, 214, .08);
-  --header-bg: rgba(255, 255, 255, .95);
-  --hero-bg: linear-gradient(180deg, #f1f6fd, #ffffff);
+  --header-bg: rgba(253, 252, 249, .95);
+  --hero-bg: linear-gradient(180deg, #eef3fa, var(--bg));
   --art-leaf: #7fd3f2;
   --notice-bg: #fff4ec;
   --footer-bg: #0f1f3d;
@@ -29,5 +29,5 @@
 .eyebrow, .therapist .role { color: var(--accent); }
 .service-icon { background: var(--primary-soft); border-radius: 12px; }
 .card:hover { border-color: #bcd2f5; }
-.tags li { background: var(--primary-soft); color: #174bb0; }
+.tags li { background: var(--primary-soft); color: #2f5ba6; }
 .chip { border-radius: 10px; }

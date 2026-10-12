@@ -1,0 +1,43 @@
+/* کودکانه نرم — pastel peach, mint, lavender; playful but professional */
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+
+:root {
+  --bg: #fffaf5;
+  --bg-alt: #f0faf6;
+  --surface: #ffffff;
+  --text: #3a3550;
+  --muted: #736d8a;
+  --primary: #7a6fd0;
+  --primary-hover: #675cbe;
+  --primary-soft: #ece9fb;
+  --accent: #ef8f6f;
+  --border: #ece6f2;
+  --radius: 26px;
+  --shadow: 0 12px 30px rgba(122, 111, 208, .1);
+  --header-bg: rgba(255, 250, 245, .92);
+  --dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Ccircle cx='15' cy='20' r='4' fill='%23ffc9b5'/%3E%3Ccircle cx='60' cy='50' r='5' fill='%23b9eadb'/%3E%3Ccircle cx='35' cy='75' r='3' fill='%23d6cff7'/%3E%3C/svg%3E");
+  --hero-bg: var(--dots), linear-gradient(160deg, #fff0e6, #eefaf5 55%, #f1eefc);
+  --art-leaf: #8fdcc4;
+  --notice-bg: #fff0e8;
+  --footer-bg: #3a3550;
+  --footer-text: #dcd8ec;
+  --footer-strong: #ffd2c2;
+  --font-heading: "Lalezar", "Vazirmatn", sans-serif;
+  --heading-weight: 400;
+}
+
+.art-bg { fill: #ffe3d6; }
+.art-ring { stroke: #8fdcc4; stroke-width: 5; stroke-dasharray: 1 16; stroke-linecap: round; opacity: 1; }
+.art-heart { fill: var(--primary); }
+.eyebrow { color: var(--accent); }
+.services .card:nth-child(1) .service-icon { background: #ffe3d6; }
+.services .card:nth-child(2) .service-icon { background: #d9f4ea; }
+.services .card:nth-child(3) .service-icon { background: #ece9fb; }
+.services .card:nth-child(4) .service-icon { background: #fff3c9; }
+.service-icon, .avatar { border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%; }
+.steps li:nth-child(1) .step-num { background: var(--accent); }
+.steps li:nth-child(2) .step-num { background: #4fbf9c; }
+.steps li:nth-child(3) .step-num { background: var(--primary); }
+.tags li { background: #d9f4ea; color: #2f6d5a; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+.therapist .role { color: var(--accent); }

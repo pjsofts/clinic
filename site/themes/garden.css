@@ -1,0 +1,37 @@
+/* باغ ایرانی — terracotta, sage, ivory and muted turquoise */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@600;700&display=swap");
+
+:root {
+  --bg: #fbf8f1;
+  --bg-alt: #f1ece0;
+  --surface: #fffdf8;
+  --text: #35302a;
+  --muted: #6f675c;
+  --primary: #b8674a;
+  --primary-hover: #9e563b;
+  --primary-soft: #f3e2d8;
+  --accent: #4f8f8a;
+  --border: #e6dccb;
+  --radius: 18px 18px 4px 4px;
+  --shadow: 0 8px 26px rgba(53, 48, 42, .08);
+  --header-bg: rgba(251, 248, 241, .94);
+  --arch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%237c9a72' stroke-opacity='.18'%3E%3Cpath d='M32 4c8 6 12 14 12 24v32H20V28c0-10 4-18 12-24z'/%3E%3Ccircle cx='32' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  --hero-bg: var(--arch), linear-gradient(180deg, #eef0e4, var(--bg));
+  --art-leaf: #8fae84;
+  --notice-bg: #e8f1ef;
+  --footer-bg: #3f4a3b;
+  --footer-text: #dfe3d3;
+  --footer-strong: #f2d9c4;
+  --font-heading: "Noto Naskh Arabic", "Vazirmatn", serif;
+  --heading-weight: 700;
+}
+
+.art-bg { fill: #e7eddd; }
+.art-ring { stroke: var(--accent); stroke-dasharray: none; stroke-width: 3; opacity: .45; }
+.art-heart { fill: var(--primary); }
+.eyebrow, .therapist .role { color: var(--accent); }
+.service-icon, .avatar { border-radius: 50% 50% 8px 8px; background: #e7eddd; }
+.step-num { background: var(--accent); border-radius: 50% 50% 8px 8px; }
+.tags li { background: #e7eddd; color: #4b5d42; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+.section-alt { background: var(--arch), var(--bg-alt); }

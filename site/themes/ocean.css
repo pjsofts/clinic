@@ -5,17 +5,17 @@
   --surface: #ffffff;
   --text: #102a43;
   --muted: #52667a;
-  --primary: #1769aa;
-  --primary-hover: #0f568d;
+  --primary: #2b77a8;
+  --primary-hover: #21628d;
   --primary-soft: #d9ecf7;
   --accent: #14a3a8;
   --border: #d3e4ee;
   --shadow: 0 10px 30px rgba(16, 42, 67, .08);
   --header-bg: rgba(244, 249, 252, .92);
-  --hero-bg: linear-gradient(135deg, #0b3a66 0%, #1769aa 55%, #19a7b0 100%);
+  --hero-bg: linear-gradient(135deg, #24557a 0%, #2f7fae 55%, #45b3b5 100%);
   --art-leaf: #7ee0dc;
   --notice-bg: #e2f6f5;
-  --footer-bg: #0b2540;
+  --footer-bg: #163650;
   --footer-text: #b9d2e4;
   --footer-strong: #ffffff;
 }
@@ -23,9 +23,9 @@
 /* Light text on the deep-blue hero */
 .hero { color: #ffffff; position: relative; overflow: hidden; }
 .hero::after {
-  content: ""; position: absolute; inset: auto 0 -1px 0; height: 70px;
+  content: ""; position: absolute; inset: auto 0 -1px 0; height: 40px;
   background: var(--bg);
-  clip-path: path("M0 40 C 320 0, 640 80, 960 40 S 1600 0, 1920 40 L 1920 80 L 0 80 Z");
+  clip-path: path("M0 24 C 400 4, 800 40, 1200 20 S 1800 6, 2400 22 L 2400 40 L 0 40 Z");
 }
 .hero .eyebrow { color: #8ef0e8; }
 .hero .lead { color: #d6e9f5; }
@@ -37,6 +37,6 @@
 .art-ring { stroke: #8ef0e8; opacity: .7; }
 .art-heart { fill: #ffffff; }
 .art-leaf { fill: #19a7b0; }
-.btn-primary { background: linear-gradient(135deg, #1769aa, #14a3a8); }
-.step-num { background: linear-gradient(135deg, #1769aa, #14a3a8); }
+.btn-primary { background: linear-gradient(135deg, #2b77a8, #3aa9ad); }
+.step-num { background: linear-gradient(135deg, #2b77a8, #3aa9ad); }
 .therapist .role, .eyebrow { color: var(--accent); }

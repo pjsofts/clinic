@@ -1,0 +1,37 @@
+/* چای سبز — matcha green, warm beige, muted gold; zen and modern */
+:root {
+  --bg: #f7f3ea;
+  --bg-alt: #eee8da;
+  --surface: #fdfbf6;
+  --text: #2f3326;
+  --muted: #6c6f5e;
+  --primary: #6f8a4b;
+  --primary-hover: #5c7439;
+  --primary-soft: #e4ead4;
+  --accent: #b39459;
+  --border: #e2dac7;
+  --radius: 10px;
+  --shadow: none;
+  --header-bg: rgba(247, 243, 234, .94);
+  --hero-bg:
+    radial-gradient(circle at 78% 50%, transparent 0 170px, rgba(111, 138, 75, .1) 171px 173px, transparent 174px),
+    radial-gradient(circle at 78% 50%, transparent 0 210px, rgba(111, 138, 75, .07) 211px 213px, transparent 214px),
+    var(--bg);
+  --art-leaf: #c9b27c;
+  --notice-bg: #f2ead6;
+  --footer-bg: #2f3326;
+  --footer-text: #d6d4c3;
+  --footer-strong: #e3cf9f;
+  --btn-radius: 10px;
+}
+
+.site-header { border-bottom: 1px solid var(--border); }
+.card { border: 1px solid var(--border); }
+.art-bg { fill: #e4ead4; }
+.art-ring { stroke: var(--accent); stroke-dasharray: 1 8; stroke-linecap: round; stroke-width: 3; }
+.eyebrow, .therapist .role { color: var(--accent); }
+.service-icon { background: var(--primary-soft); border-radius: 50%; }
+.avatar { background: var(--primary-soft); }
+.step-num { background: none; color: var(--primary); border: 2px solid var(--primary); }
+.tags li { background: var(--primary-soft); color: #4c5f31; }
+.chip[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); }

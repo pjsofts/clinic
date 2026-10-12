@@ -1,0 +1,38 @@
+/* ابر و آسمان — sky blue, cloud white, pale lilac; light and airy */
+:root {
+  --bg: #f7fbff;
+  --bg-alt: #eef4fd;
+  --surface: rgba(255, 255, 255, .85);
+  --text: #23344d;
+  --muted: #627391;
+  --primary: #4f8fd6;
+  --primary-hover: #3d7cc2;
+  --primary-soft: #e2eefc;
+  --accent: #9a86d6;
+  --border: #dde7f5;
+  --radius: 24px;
+  --shadow: 0 14px 40px rgba(79, 143, 214, .1);
+  --header-bg: rgba(247, 251, 255, .85);
+  --hero-bg:
+    radial-gradient(ellipse 120px 34px at 58% 16%, rgba(255, 255, 255, .9) 40%, transparent 72%),
+    radial-gradient(ellipse 70px 28px at 63% 12%, rgba(255, 255, 255, .9) 40%, transparent 72%),
+    radial-gradient(ellipse 150px 40px at 12% 88%, rgba(255, 255, 255, .85) 40%, transparent 72%),
+    radial-gradient(ellipse 90px 32px at 18% 83%, rgba(255, 255, 255, .85) 40%, transparent 72%),
+    radial-gradient(ellipse 100px 26px at 92% 70%, rgba(255, 255, 255, .7) 40%, transparent 72%),
+    linear-gradient(180deg, #cfe3fa 0%, #e8e1fa 75%, var(--bg) 100%);
+  --art-leaf: #c9bdf2;
+  --notice-bg: #f1edfc;
+  --footer-bg: #2b3f63;
+  --footer-text: #cad7ee;
+  --footer-strong: #ffffff;
+}
+
+.card { backdrop-filter: blur(6px); }
+.art-bg { fill: rgba(255, 255, 255, .7); }
+.art-ring { stroke: #ffffff; opacity: .9; stroke-width: 3; }
+.art-heart { fill: #6ea2df; }
+.eyebrow, .therapist .role { color: var(--accent); }
+.btn-primary { background: linear-gradient(135deg, #6aa5e6, #8f82d9); }
+.step-num { background: linear-gradient(135deg, #6aa5e6, #8f82d9); }
+.chip[aria-pressed="true"] { background: var(--primary); }
+.tags li { background: #f1edfc; color: #5a4a9a; }

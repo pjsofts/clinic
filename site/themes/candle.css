@@ -1,0 +1,39 @@
+/* شمع و سایه — warm charcoal, soft amber, cream; an intimate evening room */
+:root {
+  --bg: #1d1915;
+  --bg-alt: #24201b;
+  --surface: #2b2620;
+  --text: #f3e9da;
+  --muted: #c2b3a0;
+  --primary: #e7a955;
+  --primary-hover: #f0bb70;
+  --primary-soft: #3d3122;
+  --on-primary: #2a1d0c;
+  --accent: #e7a955;
+  --border: #3b342b;
+  --danger: #ff9b85;
+  --success: #b5d99c;
+  --shadow: 0 14px 34px rgba(0, 0, 0, .35);
+  --header-bg: rgba(29, 25, 21, .9);
+  --hero-bg:
+    radial-gradient(circle at 22% 45%, rgba(231, 169, 85, .28), transparent 38%),
+    radial-gradient(circle at 22% 45%, rgba(255, 214, 150, .12), transparent 60%),
+    var(--bg);
+  --art-leaf: #fff1d6;
+  --notice-bg: #33261a;
+  --footer-bg: #14110e;
+  --footer-text: #c2b3a0;
+  --footer-strong: #f3e9da;
+  --input-bg: #221e19;
+}
+
+body { color-scheme: dark; }
+.art-bg { fill: #2e261d; }
+.art-ring { stroke: var(--primary); opacity: .5; }
+.hero-art svg { filter: drop-shadow(0 0 60px rgba(231, 169, 85, .4)); }
+.art-heart, .art-leaf { animation-name: flicker; animation-duration: 5s; }
+@keyframes flicker { 30% { transform: scale(1.03); opacity: .94; } 60% { transform: scale(.99); } }
+.card { border-color: var(--border); }
+.tags li { background: var(--primary-soft); color: var(--primary); }
+.chip { background: transparent; color: var(--text); }
+.notice a { color: var(--primary); }

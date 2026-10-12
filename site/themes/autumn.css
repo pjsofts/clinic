@@ -13,14 +13,14 @@
   --shadow: 0 8px 26px rgba(91, 58, 30, .1);
   --header-bg: rgba(251, 246, 238, .93);
   --hero-bg:
-    radial-gradient(circle at 85% 15%, rgba(227, 168, 54, .25), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(201, 162, 90, .22), transparent 40%),
     radial-gradient(circle at 10% 90%, rgba(107, 123, 52, .18), transparent 40%),
     var(--bg);
-  --art-leaf: #e3a836;
+  --art-leaf: #c9a25a;
   --notice-bg: #f1f2e2;
   --footer-bg: #3a2a1d;
   --footer-text: #e3d3bf;
-  --footer-strong: #f5c35a;
+  --footer-strong: #e6c98f;
 }
 
 .art-bg { fill: #f3e2c9; }
@@ -28,8 +28,12 @@
 .eyebrow, .therapist .role { color: var(--accent); }
 .services .card:nth-child(1) .service-icon { background: #f6e0d2; }
 .services .card:nth-child(2) .service-icon { background: #ecefd8; }
-.services .card:nth-child(3) .service-icon { background: #fbecc8; }
+.services .card:nth-child(3) .service-icon { background: #f4e8cf; }
 .services .card:nth-child(4) .service-icon { background: #efe1d6; }
 .tags li { background: #ecefd8; color: #4f5a24; }
 .step-num { background: var(--accent); }
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.section-alt { background-color: var(--bg-alt); }
