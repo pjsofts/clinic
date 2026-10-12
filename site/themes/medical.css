@@ -26,7 +26,7 @@
 .hero-art svg { filter: drop-shadow(0 20px 40px rgba(31, 95, 214, .18)); }
 .art-bg { fill: #ffffff; }
 .art-ring { stroke: var(--primary); stroke-dasharray: none; stroke-width: 1.5; opacity: .25; }
-.eyebrow, .therapist .role { color: var(--accent); }
+.eyebrow, .therapist .role { color: var(--accent-text); }
 .service-icon { background: var(--primary-soft); border-radius: 12px; }
 .card:hover { border-color: #bcd2f5; }
 .tags li { background: var(--primary-soft); color: #2f5ba6; }

@@ -34,6 +34,6 @@ body { color-scheme: dark; }
 .card { border-color: var(--border); }
 .tags li { background: var(--primary-soft); color: var(--primary); }
 .chip { background: transparent; color: var(--text); }
-.notice a { color: var(--accent); }
-.eyebrow { color: var(--accent); }
+.notice a { color: var(--accent-text); }
+.eyebrow { color: var(--accent-text); }
 .hero-art svg { filter: drop-shadow(0 0 70px rgba(60, 196, 176, .3)); }

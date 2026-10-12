@@ -21,7 +21,7 @@
   --footer-bg: #24163f;
   --footer-text: #cfc3ee;
   --footer-strong: #ffffff;
-  --gradient: linear-gradient(135deg, #6d4ad1, #d0529f);
+  --gradient: linear-gradient(135deg, #6d4ad1, #b8458b);
 }
 
 .hero h1 { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }

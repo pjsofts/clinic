@@ -38,7 +38,7 @@ body { color-scheme: dark; }
 }
 .tags li { background: var(--primary-soft); color: var(--text); }
 .chip { background: transparent; color: var(--text); }
-.notice a { color: var(--accent); }
+.notice a { color: var(--accent-text); }
 .service-icon { background: var(--primary-soft); }
 .hero-art svg { filter: drop-shadow(0 0 60px rgba(169, 156, 240, .35)); }
 .art-bg { fill: #231f4d; }

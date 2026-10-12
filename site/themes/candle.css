@@ -31,8 +31,6 @@ body { color-scheme: dark; }
 .art-bg { fill: #2e261d; }
 .art-ring { stroke: var(--primary); opacity: .5; }
 .hero-art svg { filter: drop-shadow(0 0 60px rgba(231, 169, 85, .4)); }
-.art-heart, .art-leaf { animation-name: flicker; animation-duration: 5s; }
-@keyframes flicker { 30% { transform: scale(1.03); opacity: .94; } 60% { transform: scale(.99); } }
 .card { border-color: var(--border); }
 .tags li { background: var(--primary-soft); color: var(--primary); }
 .chip { background: transparent; color: var(--text); }

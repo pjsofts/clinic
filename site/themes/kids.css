@@ -7,8 +7,8 @@
   --surface: #ffffff;
   --text: #3a3550;
   --muted: #736d8a;
-  --primary: #7a6fd0;
-  --primary-hover: #675cbe;
+  --primary: #6a5ec4;
+  --primary-hover: #5a4fb0;
   --primary-soft: #ece9fb;
   --accent: #ef8f6f;
   --border: #ece6f2;
@@ -24,12 +24,13 @@
   --footer-strong: #ffd2c2;
   --font-heading: "Lalezar", "Vazirmatn", sans-serif;
   --heading-weight: 400;
+  --accent-text: color-mix(in srgb, var(--accent) 45%, var(--text));
 }
 
 .art-bg { fill: #ffe3d6; }
 .art-ring { stroke: #8fdcc4; stroke-width: 5; stroke-dasharray: 1 16; stroke-linecap: round; opacity: 1; }
 .art-heart { fill: var(--primary); }
-.eyebrow { color: var(--accent); }
+.eyebrow { color: var(--accent-text); }
 .services .card:nth-child(1) .service-icon { background: #ffe3d6; }
 .services .card:nth-child(2) .service-icon { background: #d9f4ea; }
 .services .card:nth-child(3) .service-icon { background: #ece9fb; }
@@ -39,5 +40,5 @@
 .steps li:nth-child(2) .step-num { background: #4fbf9c; }
 .steps li:nth-child(3) .step-num { background: var(--primary); }
 .tags li { background: #d9f4ea; color: #2f6d5a; }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
-.therapist .role { color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent-text); border-color: var(--accent-text); }
+.therapist .role { color: var(--accent-text); }

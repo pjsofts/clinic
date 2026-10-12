@@ -46,7 +46,7 @@
 .btn-ghost { border-color: var(--accent); color: var(--text); }
 .btn-ghost:hover { background: #fbf3e2; }
 .chip { border-radius: 4px; }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent-text); border-color: var(--accent-text); }
 .tags li { border-radius: 4px; background: var(--primary-soft); }
 .art-bg { fill: #e3f1f1; }
 .art-ring { stroke: var(--accent); stroke-dasharray: none; stroke-width: 6; opacity: .6; }

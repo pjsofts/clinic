@@ -65,6 +65,12 @@ scoped by `[data-style="…"]`).
   mockup of each style.
 - Pick the final style: set `CLINIC_DEFAULT_STYLE` in `site/config.js` (`''` keeps the theme's own shapes).
 
+## Accessibility check
+
+`tools/contrast-audit.mjs` measures WCAG contrast (target 4.5:1) for 13 key text/background pairs — body and muted
+text, buttons, labels, chips, tags, footer, notices — in every theme, optionally with a design style. Run it after
+changing any colors (usage at the top of the file). All 18 themes pass on their own and with each of the 8 styles.
+
 ## Admin page
 
 `/clinic/admin/` — log in with the admin password. Lists call-back requests (newest first) with tap-to-call

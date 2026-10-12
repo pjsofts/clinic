@@ -4,9 +4,9 @@
   --bg-alt: #eef4fd;
   --surface: rgba(255, 255, 255, .85);
   --text: #23344d;
-  --muted: #627391;
-  --primary: #4f8fd6;
-  --primary-hover: #3d7cc2;
+  --muted: #5c6c88;
+  --primary: #2d74c2;
+  --primary-hover: #2661a3;
   --primary-soft: #e2eefc;
   --accent: #9a86d6;
   --border: #dde7f5;
@@ -31,8 +31,8 @@
 .art-bg { fill: rgba(255, 255, 255, .7); }
 .art-ring { stroke: #ffffff; opacity: .9; stroke-width: 3; }
 .art-heart { fill: #6ea2df; }
-.eyebrow, .therapist .role { color: var(--accent); }
-.btn-primary { background: linear-gradient(135deg, #6aa5e6, #8f82d9); }
-.step-num { background: linear-gradient(135deg, #6aa5e6, #8f82d9); }
+.eyebrow, .therapist .role { color: var(--accent-text); }
+.btn-primary { background: linear-gradient(135deg, #2d74c2, #6a5cc0); }
+.step-num { background: linear-gradient(135deg, #2d74c2, #6a5cc0); }
 .chip[aria-pressed="true"] { background: var(--primary); }
 .tags li { background: #f1edfc; color: #5a4a9a; }

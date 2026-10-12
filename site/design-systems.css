@@ -33,7 +33,9 @@
 [data-style="sharp"] :is(input[type="text"], input[type="tel"], input[type="password"], select, textarea) {
   border: 0; border-bottom: 2px solid var(--text); border-radius: 0; padding-inline: 2px; background: transparent;
 }
-[data-style="sharp"] :is(input, select, textarea):focus { box-shadow: none; border-bottom-color: var(--primary); }
+/* A faint fill keeps underline-only fields findable. */
+[data-style="sharp"] :is(input[type="text"], input[type="tel"], input[type="password"], select, textarea) { background: color-mix(in srgb, var(--bg-alt) 60%, transparent); }
+[data-style="sharp"] :is(input, select, textarea):focus { box-shadow: none; border-bottom-color: var(--primary); background: var(--primary-soft); }
 [data-style="sharp"] :is(.chip, .tags li, .avatar, .service-icon, .step-num) { border-radius: 0; }
 [data-style="sharp"] .site-header { background: var(--bg); backdrop-filter: none; border-bottom: 2px solid var(--text); }
 [data-style="sharp"] .site-nav a:not(.btn) { font-weight: 700; }
@@ -47,7 +49,7 @@
 [data-style="outline"] .card { background: transparent; border: 1.5px solid var(--border); box-shadow: none; }
 [data-style="outline"] .card:hover { border-color: var(--primary); box-shadow: none; }
 [data-style="outline"] :is(input[type="text"], input[type="tel"], input[type="password"], select, textarea) { border-radius: 8px; border-width: 1.5px; background: transparent; }
-[data-style="outline"] .chip[aria-pressed="true"] { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); }
+[data-style="outline"] .chip[aria-pressed="true"] { background: transparent; color: color-mix(in srgb, var(--primary) 70%, var(--text)); border: 1.5px solid var(--primary); }
 [data-style="outline"] .tags li { background: transparent; border: 1px solid var(--border); }
 [data-style="outline"] :is(.service-icon, .avatar) { background: transparent; border: 1.5px solid var(--border); }
 [data-style="outline"] .step-num { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
@@ -72,6 +74,8 @@
 [data-style="floating"] :is(input[type="text"], input[type="tel"], input[type="password"], select, textarea) { border-radius: 14px; background: var(--bg-alt); border-color: transparent; }
 [data-style="floating"] :is(.chip, .tags li) { border-radius: 999px; }
 [data-style="floating"] :is(.avatar, .service-icon) { border-radius: 50%; }
+/* Anchor jumps land below the floating header. */
+html[data-style="floating"] { scroll-padding-top: 100px; }
 @media (max-width: 820px) {
   [data-style="floating"] .site-header { border-radius: 28px; }
   [data-style="floating"] .site-nav.open { margin-top: 8px; border: 1px solid var(--border); border-radius: 24px; }
@@ -110,7 +114,8 @@
     var(--bg);
   background-attachment: fixed;
 }
-[data-style="glass"] :is(.section-alt, .hero) { background: color-mix(in srgb, var(--bg-alt) 35%, transparent); }
+/* Only alternate sections go translucent; heroes keep their theme background (some carry light text on dark). */
+[data-style="glass"] .section-alt { background: color-mix(in srgb, var(--bg-alt) 35%, transparent); }
 [data-style="glass"] .card {
   background: color-mix(in srgb, var(--surface) 55%, transparent);
   border: 1px solid color-mix(in srgb, #ffffff 45%, transparent);
@@ -160,3 +165,9 @@
 /* Themes that render services as a flush list (clay) need breathing room once a style turns rows into cards. */
 [data-theme="clay"][data-style] .services { gap: 16px; border-top: 0; }
 [data-theme="clay"][data-style] .services .card { border-radius: var(--radius); }
+
+/* Browsers without backdrop-filter get solid glass surfaces instead of see-through ones. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  [data-style="glass"] :is(.card, .site-header) { background: var(--surface); }
+  [data-style="glass"] .site-header { background: var(--bg); }
+}

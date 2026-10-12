@@ -5,8 +5,8 @@
   --surface: #fffdf9;
   --text: #3a2a1d;
   --muted: #76614f;
-  --primary: #b9562b;
-  --primary-hover: #9c4520;
+  --primary: #b3532a;
+  --primary-hover: #984724;
   --primary-soft: #f6e0d2;
   --accent: #6b7b34;
   --border: #e8dac4;
@@ -25,14 +25,14 @@
 
 .art-bg { fill: #f3e2c9; }
 .art-ring { stroke: var(--accent); }
-.eyebrow, .therapist .role { color: var(--accent); }
+.eyebrow, .therapist .role { color: var(--accent-text); }
 .services .card:nth-child(1) .service-icon { background: #f6e0d2; }
 .services .card:nth-child(2) .service-icon { background: #ecefd8; }
 .services .card:nth-child(3) .service-icon { background: #f4e8cf; }
 .services .card:nth-child(4) .service-icon { background: #efe1d6; }
 .tags li { background: #ecefd8; color: #4f5a24; }
 .step-num { background: var(--accent); }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent-text); border-color: var(--accent-text); }
 body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
 }

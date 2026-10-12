@@ -26,6 +26,8 @@
   --font: "Vazirmatn", Tahoma, sans-serif;
   --font-heading: var(--font);
   --heading-weight: 800;
+  /* Accent tuned for small text: the theme accent pulled toward the text color (darker on light themes, lighter on dark). */
+  --accent-text: color-mix(in srgb, var(--accent) 55%, var(--text));
 }
 
 * { box-sizing: border-box; }
@@ -118,7 +120,7 @@ p { margin: 0 0 1em; }
 
 .hero { padding: 72px 0 56px; background: var(--hero-bg); }
 .hero-inner { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 48px; }
-.eyebrow { color: var(--accent); font-weight: 700; margin-bottom: .5em; }
+.eyebrow { color: var(--accent-text); font-weight: 700; margin-bottom: .5em; }
 .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: var(--heading-weight); }
 .lead { font-size: 1.1rem; color: var(--muted); max-width: 38em; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
@@ -182,7 +184,7 @@ p { margin: 0 0 1em; }
   background: var(--primary-soft); color: var(--primary); object-fit: cover;
 }
 .therapist h3 { margin: 0; font-size: 1.1rem; }
-.therapist .role { color: var(--accent); font-weight: 500; font-size: .95rem; }
+.therapist .role { color: var(--accent-text); font-weight: 500; font-size: .95rem; }
 .therapist .bio { color: var(--muted); font-size: .95rem; }
 .therapist dl { margin: 0 0 16px; font-size: .88rem; display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; }
 .therapist dt { color: var(--muted); }

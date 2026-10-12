@@ -12,7 +12,10 @@
   --border: #d3e4ee;
   --shadow: 0 10px 30px rgba(16, 42, 67, .08);
   --header-bg: rgba(244, 249, 252, .92);
-  --hero-bg: linear-gradient(135deg, #24557a 0%, #2f7fae 55%, #45b3b5 100%);
+  /* Dark side sits under the (right-aligned, RTL) text; the aqua glow stays behind the artwork. */
+  --hero-bg:
+    radial-gradient(circle at 22% 50%, rgba(69, 179, 181, .45), transparent 38%),
+    linear-gradient(to left, #1f4d70 0%, #24557a 45%, #276f93 100%);
   --art-leaf: #7ee0dc;
   --notice-bg: #e2f6f5;
   --footer-bg: #163650;
@@ -28,7 +31,7 @@
   clip-path: path("M0 24 C 400 4, 800 40, 1200 20 S 1800 6, 2400 22 L 2400 40 L 0 40 Z");
 }
 .hero .eyebrow { color: #8ef0e8; }
-.hero .lead { color: #d6e9f5; }
+.hero .lead { color: #e8f3fa; }
 .hero .btn-primary { background: #ffffff; color: var(--primary); }
 .hero .btn-primary:hover { background: #e6f2f8; }
 .hero .btn-ghost { border-color: rgba(255, 255, 255, .7); color: #ffffff; }
@@ -37,6 +40,6 @@
 .art-ring { stroke: #8ef0e8; opacity: .7; }
 .art-heart { fill: #ffffff; }
 .art-leaf { fill: #19a7b0; }
-.btn-primary { background: linear-gradient(135deg, #2b77a8, #3aa9ad); }
-.step-num { background: linear-gradient(135deg, #2b77a8, #3aa9ad); }
-.therapist .role, .eyebrow { color: var(--accent); }
+.btn-primary { background: linear-gradient(135deg, #2b77a8, #1c7a80); }
+.step-num { background: linear-gradient(135deg, #2b77a8, #1c7a80); }
+.therapist .role, .eyebrow { color: var(--accent-text); }

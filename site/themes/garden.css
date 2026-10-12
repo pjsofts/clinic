@@ -7,8 +7,8 @@
   --surface: #fffdf8;
   --text: #35302a;
   --muted: #6f675c;
-  --primary: #b8674a;
-  --primary-hover: #9e563b;
+  --primary: #a75c42;
+  --primary-hover: #8d4e38;
   --primary-soft: #f3e2d8;
   --accent: #4f8f8a;
   --border: #e6dccb;
@@ -29,9 +29,9 @@
 .art-bg { fill: #e7eddd; }
 .art-ring { stroke: var(--accent); stroke-dasharray: none; stroke-width: 3; opacity: .45; }
 .art-heart { fill: var(--primary); }
-.eyebrow, .therapist .role { color: var(--accent); }
+.eyebrow, .therapist .role { color: var(--accent-text); }
 .service-icon, .avatar { border-radius: 50% 50% 8px 8px; background: #e7eddd; }
 .step-num { background: var(--accent); border-radius: 50% 50% 8px 8px; }
 .tags li { background: #e7eddd; color: #4b5d42; }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent-text); border-color: var(--accent-text); }
 .section-alt { background: var(--arch), var(--bg-alt); }

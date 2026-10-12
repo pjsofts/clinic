@@ -58,6 +58,15 @@
     .mock-actions .btn { font-size: .9rem; }
     .mock .card { padding: 14px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
     .mock .tags { margin: 0; }
+    .theme-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: -12px 0 28px; }
+    .theme-card[hidden] { display: none; }
+    .swatches { display: flex; gap: 6px; margin: 2px 0 10px; }
+    .swatches span { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0, 0, 0, .12); }
+    .card-actions { display: flex; gap: 8px; margin-top: auto; }
+    .card-actions .btn-primary { flex: 1; }
+    .card-actions .btn-ghost { padding-inline: 1em; }
+    .copy-toast { position: fixed; top: 20px; inset-inline-start: 50%; transform: translateX(50%); z-index: 70;
+      background: #1d1d1f; color: #fff; padding: 8px 18px; border-radius: 999px; font-size: .9rem; }
   </style>
 </head>
 <body>
@@ -75,6 +84,7 @@
       <label for="style-select">سبک:</label>
       <select id="style-select"></select>
     </div>
+    <div class="theme-filters" id="theme-filters" role="group" aria-label="دسته‌بندی طرح‌ها"></div>
     <div class="gallery" id="gallery"></div>
 
     <section aria-labelledby="styles-title">
@@ -108,16 +118,66 @@
           <a class="shot"><img src="themes/previews/${t.id}.jpg" alt="" loading="lazy" width="1280" height="880"></a>
           <div class="body">
             <h2><span class="num">طرح ${faDigits(i + 1)}</span></h2>
+            <div class="swatches" aria-hidden="true"></div>
             <p></p>
-            <a class="btn btn-primary">مشاهده این طرح</a>
+            <div class="card-actions">
+              <a class="btn btn-primary">مشاهده این طرح</a>
+              <button type="button" class="btn btn-ghost copy" title="کپی لینک این طرح">کپی لینک</button>
+            </div>
           </div>`;
+        card.dataset.tags = t.tags;
+        card.dataset.theme = t.id;
         card.querySelector('h2').append(t.name);
         card.querySelector('p').textContent = t.description;
         card.querySelector('img').alt = `پیش‌نمایش طرح ${t.name}`;
         card.querySelectorAll('a').forEach((a) => themeLinks.push({ a, theme: t.id }));
+        card.querySelector('.copy').addEventListener('click', () => copyLink(t));
         return card;
       }),
     );
+
+    // ---------- Filters ----------
+    const FILTERS = [
+      ['', 'همه'], ['light', 'روشن'], ['dark', 'تیره'], ['warm', 'گرم'], ['cool', 'سرد'],
+      ['traditional', 'اصیل ایرانی'], ['family', 'کودک و خانواده'], ['minimal', 'ساده'],
+    ];
+    const themeCards = [...document.querySelectorAll('.theme-card')];
+    const filterChips = FILTERS.map(([tag, label]) => {
+      const chip = Object.assign(document.createElement('button'), { type: 'button', className: 'chip', textContent: label });
+      chip.addEventListener('click', () => {
+        filterChips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+        themeCards.forEach((card) => (card.hidden = Boolean(tag) && !card.dataset.tags.split(' ').includes(tag)));
+      });
+      chip.setAttribute('aria-pressed', String(tag === ''));
+      return chip;
+    });
+    document.getElementById('theme-filters').replaceChildren(...filterChips);
+
+    // ---------- Palette swatches, read from the theme stylesheets so they never drift ----------
+    const TOKENS = ['--bg', '--primary', '--accent', '--text'];
+    const readTokens = (css) => Object.fromEntries(TOKENS.map((t) => [t, (css.match(new RegExp(`${t}:\\s*(#[0-9a-fA-F]{3,8})`)) || [])[1]]));
+    fetch('styles.css').then((r) => r.text()).then((baseCss) => {
+      const base = readTokens(baseCss);
+      themeCards.forEach(async (card) => {
+        const css = await fetch(`themes/${card.dataset.theme}.css`).then((r) => r.text()).catch(() => '');
+        const own = readTokens(css);
+        card.querySelector('.swatches').replaceChildren(
+          ...TOKENS.map((t) => Object.assign(document.createElement('span'), { style: `background:${own[t] || base[t]}` })),
+        );
+      });
+    });
+
+    // ---------- Shareable links ----------
+    let linkExtra = '';
+    function copyLink(t) {
+      const url = new URL(`./?theme=${t.id}${linkExtra}`, location.href).href;
+      const done = () => {
+        const toast = Object.assign(document.createElement('div'), { className: 'copy-toast', role: 'status', textContent: `لینک «${t.name}» کپی شد` });
+        document.body.append(toast);
+        setTimeout(() => toast.remove(), 1800);
+      };
+      navigator.clipboard?.writeText(url).then(done, () => prompt('لینک را کپی کنید:', url)) ?? prompt('لینک را کپی کنید:', url);
+    }
 
     const fontCards = window.CLINIC_FONTS.map((f) => {
       const vars = window.clinicFontCss(f, false);
@@ -187,6 +247,7 @@
       fontCards.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.font === selectedFont)));
       styleCards.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.style === selectedStyle)));
       const extra = (selectedFont ? `&font=${selectedFont}` : '') + (selectedStyle ? `&style=${selectedStyle}` : '');
+      linkExtra = extra;
       themeLinks.forEach(({ a, theme }) => (a.href = `./?theme=${theme}${extra}`));
       history.replaceState(null, '', extra ? `?${extra.slice(1)}` : location.pathname);
     }

@@ -5,8 +5,8 @@
   --surface: #ffffff;
   --text: #3d2330;
   --muted: #7d5f6a;
-  --primary: #a8687a;
-  --primary-hover: #915566;
+  --primary: #a05c6f;
+  --primary-hover: #864d5d;
   --primary-soft: #f3e1e4;
   --accent: #6f9a7a;
   --border: #efd6db;
@@ -25,11 +25,11 @@
   --footer-strong: #ffe4ea;
 }
 
-.btn-primary { background: linear-gradient(135deg, #b87a8b, #915566); }
-.btn-primary:hover { background: linear-gradient(135deg, #a8687a, #7f4858); }
+.btn-primary { background: linear-gradient(135deg, #a05c6f, #864d5d); }
+.btn-primary:hover { background: linear-gradient(135deg, #925466, #774452); }
 .art-bg { fill: #f3e1e4; fill-opacity: .8; }
 .art-ring { stroke: var(--accent); }
-.eyebrow { color: var(--accent); }
-.therapist .role { color: var(--accent); }
+.eyebrow { color: var(--accent-text); }
+.therapist .role { color: var(--accent-text); }
 .tags li { background: var(--primary-soft); color: #7a4655; }
-.step-num { background: linear-gradient(135deg, #b87a8b, #915566); }
+.step-num { background: linear-gradient(135deg, #a05c6f, #864d5d); }

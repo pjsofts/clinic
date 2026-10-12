@@ -4,9 +4,9 @@
   --bg-alt: #eee8da;
   --surface: #fdfbf6;
   --text: #2f3326;
-  --muted: #6c6f5e;
-  --primary: #6f8a4b;
-  --primary-hover: #5c7439;
+  --muted: #636556;
+  --primary: #5e753f;
+  --primary-hover: #4e6134;
   --primary-soft: #e4ead4;
   --accent: #b39459;
   --border: #e2dac7;
@@ -29,7 +29,7 @@
 .card { border: 1px solid var(--border); }
 .art-bg { fill: #e4ead4; }
 .art-ring { stroke: var(--accent); stroke-dasharray: 1 8; stroke-linecap: round; stroke-width: 3; }
-.eyebrow, .therapist .role { color: var(--accent); }
+.eyebrow, .therapist .role { color: var(--accent-text); }
 .service-icon { background: var(--primary-soft); border-radius: 50%; }
 .avatar { background: var(--primary-soft); }
 .step-num { background: none; color: var(--primary); border: 2px solid var(--primary); }

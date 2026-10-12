@@ -39,7 +39,7 @@ body { line-height: 2.1; }
 .hero-inner { grid-template-columns: minmax(0, 760px); }
 .hero-art { display: none; }
 .hero h1 { font-size: clamp(2.3rem, 1.05rem + 3.9vw, 3.9rem); line-height: 1.7; }
-.eyebrow { color: #8f867e; font-weight: 500; font-size: .9rem; }
+.eyebrow { color: var(--muted); font-weight: 500; font-size: .9rem; }
 .lead { color: var(--muted); }
 
 .btn { font-weight: 500; }
