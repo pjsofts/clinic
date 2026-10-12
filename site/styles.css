@@ -229,6 +229,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--p
 input[dir="ltr"] { text-align: right; }
 input[dir="ltr"]:placeholder-shown { direction: ltr; }
 textarea { resize: vertical; }
+/* Styles may make a select's own background transparent; keep its opened list solid and readable. */
+select option { background-color: var(--bg); color: var(--text); }
 
 .choices { display: flex; gap: 12px; flex-wrap: wrap; }
 .choice { display: inline-flex !important; align-items: center; gap: 8px; font-weight: 400 !important; cursor: pointer; }
@@ -271,10 +273,14 @@ textarea { resize: vertical; }
   background: #1d1d1f; color: #fff; padding: 8px 16px; border-radius: 24px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, .25); font: 500 .9rem/1.5 "Vazirmatn", Tahoma, sans-serif;
 }
-.theme-bar select {
+/* The bar is a fixed UI control: the #id keeps theme and design-style rules (which restyle every select) off it. */
+#theme-bar select {
   width: auto; padding: .2em .6em; border-radius: 999px; border: 0;
-  font: inherit; background: #fff; color: #1d1d1f;
+  font: inherit; background: #fff; color: #1d1d1f; color-scheme: light;
+  box-shadow: none; backdrop-filter: none;
 }
+#theme-bar select:focus { outline: 2px solid #fff; outline-offset: 2px; box-shadow: none; }
+#theme-bar option { background: #fff; color: #1d1d1f; }
 .theme-bar a { color: #fff; font-size: .85rem; }
 
 /* ---------- Micro-interactions (all themes) ---------- */

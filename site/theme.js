@@ -128,6 +128,7 @@ window.CLINIC_STYLES = [
 
     var bar = document.createElement('div');
     bar.className = 'theme-bar';
+    bar.id = 'theme-bar';
     // Keep each label next to its select when the bar wraps on small screens.
     function group(text, select) {
       var label = document.createElement('label');
