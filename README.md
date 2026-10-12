@@ -55,6 +55,16 @@ with any theme.
 - Font list: `CLINIC_FONTS` in `site/theme.js`. Fonts load from Google Fonts or jsDelivr; Estedad's
   `@font-face` is in `site/fonts/estedad.css`.
 
+## Design styles
+
+Eight component styles — buttons, nav bar, cards, inputs, chips — that combine with any theme and font:
+`pill`, `rounded`, `sharp`, `outline`, `floating`, `bold`, `glass`, `classic` (all in `site/design-systems.css`,
+scoped by `[data-style="…"]`).
+
+- Preview: `https://pjsofts.github.io/clinic/?theme=clay&font=dana&style=floating` — the gallery shows a live
+  mockup of each style.
+- Pick the final style: set `CLINIC_DEFAULT_STYLE` in `site/config.js` (`''` keeps the theme's own shapes).
+
 ## Admin page
 
 `/clinic/admin/` — log in with the admin password. Lists call-back requests (newest first) with tap-to-call

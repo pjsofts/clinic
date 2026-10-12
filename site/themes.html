@@ -36,6 +36,28 @@
     .font-card .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-family: Vazirmatn, Tahoma, sans-serif; }
     .font-card .meta strong { font-size: 1rem; }
     .font-card .meta span { color: var(--muted); font-size: .85rem; }
+    .styles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 24px; padding: 16px 0 40px; }
+    .style-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; cursor: pointer; }
+    .style-card[aria-pressed="true"] { outline: 3px solid var(--primary); outline-offset: 3px; }
+    .style-card .meta { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 4px; font-family: Vazirmatn, Tahoma, sans-serif; }
+    .style-card .meta span { color: var(--muted); font-size: .9rem; }
+    .mock { background: var(--bg); padding-bottom: 18px; border-bottom: 1px solid var(--border); min-height: 290px; pointer-events: none; }
+    .style-card[data-style="glass"] .mock {
+      background: radial-gradient(circle at 15% 30%, color-mix(in srgb, var(--primary) 28%, transparent), transparent 45%),
+                  radial-gradient(circle at 90% 80%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 45%), var(--bg);
+    }
+    .mock .site-header { position: static; margin-top: 0; }
+    .mock .header-inner { width: auto; min-height: 54px; padding-inline: 14px; }
+    .mock .brand strong { font-size: 1rem; white-space: nowrap; }
+    .mock .site-nav .btn { white-space: nowrap; padding: .3em 1em; }
+    .mock .site-nav { display: flex; position: static; flex-direction: row; align-items: center; gap: 12px; padding: 0; background: none; border: 0; }
+    .mock .site-nav a:not(.btn) { font-size: .85rem; padding: 0; border-bottom: 0; }
+    .mock .site-nav .btn { margin: 0; }
+    .mock-body { padding: 18px 16px 0; display: grid; gap: 14px; }
+    .mock-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .mock-actions .btn { font-size: .9rem; }
+    .mock .card { padding: 14px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .mock .tags { margin: 0; }
   </style>
 </head>
 <body>
@@ -44,14 +66,24 @@
       <h1>طرح سایت دل آسا را انتخاب کنید</h1>
       <p>
         محتوا و امکانات همه طرح‌ها یکسان است و فقط ظاهر آن‌ها فرق می‌کند. هر طرح را باز کنید و در سایت بگردید؛
-        با منوی پایین صفحه می‌توانید بین طرح‌ها و فونت‌ها جابه‌جا شوید. سپس نام طرح و فونت دلخواهتان را به ما اعلام کنید.
+        با منوی پایین صفحه می‌توانید بین طرح‌ها، فونت‌ها و سبک‌ها جابه‌جا شوید. سپس نام طرح، فونت و سبک دلخواهتان را به ما اعلام کنید.
       </p>
     </header>
     <div class="font-picker">
       <label for="font-select">فونت پیش‌نمایش:</label>
       <select id="font-select"></select>
+      <label for="style-select">سبک:</label>
+      <select id="style-select"></select>
     </div>
     <div class="gallery" id="gallery"></div>
+
+    <section aria-labelledby="styles-title">
+      <header class="fonts-head">
+        <h2 id="styles-title">سبک‌ها: دکمه، منو و کارت‌ها</h2>
+        <p>شکل دکمه‌ها، نوار منو، کارت‌ها و فیلدهای فرم. روی هر سبک بزنید تا همه طرح‌ها با آن باز شوند؛ هر سبک با هر طرح و فونتی ترکیب می‌شود.</p>
+      </header>
+      <div class="styles" id="styles"></div>
+    </section>
 
     <section aria-labelledby="fonts-title">
       <header class="fonts-head">
@@ -105,24 +137,60 @@
     });
     document.getElementById('fonts').replaceChildren(...fontCards);
 
-    fontSelect.append(
-      ...[{ id: '', name: 'فونت خود طرح' }, ...window.CLINIC_FONTS].map((f) => {
-        const option = document.createElement('option');
-        option.value = f.id;
-        option.textContent = f.name;
-        return option;
-      }),
-    );
+    const styleSelect = document.getElementById('style-select');
+    let selectedStyle = new URLSearchParams(location.search).get('style') || '';
+
+    const logo = `<svg class="logo" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true"><circle class="logo-bg" cx="32" cy="32" r="30"/><path class="logo-heart" d="M32 50c-1.5 0-17-10-17-22 0-6 4.3-10.5 9.8-10.5 3.2 0 5.7 1.6 7.2 3.9 1.5-2.3 4-3.9 7.2-3.9C44.7 17.5 49 22 49 28c0 12-15.5 22-17 22z"/><path class="logo-leaf" d="M32 41c0-9 4.5-15 11.5-16.8-.4 7.7-5 14-11.5 16.8z"/></svg>`;
+    const styleCards = window.CLINIC_STYLES.map((st) => {
+      const card = document.createElement('article');
+      card.className = 'card style-card';
+      card.dataset.style = st.id;
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.innerHTML = `
+        <div class="mock" aria-hidden="true">
+          <div class="site-header"><div class="header-inner">
+            <span class="brand">${logo}<span><strong>دل آسا</strong></span></span>
+            <nav class="site-nav"><a>خدمات</a><a>درمانگران</a><a class="btn btn-primary btn-sm">نوبت</a></nav>
+          </div></div>
+          <div class="mock-body">
+            <div class="mock-actions"><span class="btn btn-primary">ثبت درخواست تماس</span><span class="btn btn-ghost">آشنایی با درمانگران</span></div>
+            <input type="text" placeholder="نام و نام خانوادگی" tabindex="-1">
+            <div class="card"><span class="chip" aria-pressed="true">همه</span><span class="chip">اضطراب</span><ul class="tags"><li>زوج‌درمانی</li></ul></div>
+          </div>
+        </div>
+        <div class="meta"><strong></strong><span></span></div>`;
+      card.querySelector('.meta strong').textContent = st.name;
+      card.querySelector('.meta span').textContent = st.description;
+      const choose = () => { selectedStyle = selectedStyle === st.id ? '' : st.id; update(); };
+      card.addEventListener('click', choose);
+      card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(); } });
+      return card;
+    });
+    document.getElementById('styles').replaceChildren(...styleCards);
+
+    const fillSelect = (select, first, items) =>
+      select.append(...[first, ...items].map((item) => Object.assign(document.createElement('option'), { value: item.id, textContent: item.name })));
+    fillSelect(fontSelect, { id: '', name: 'فونت خود طرح' }, window.CLINIC_FONTS);
+    fillSelect(styleSelect, { id: '', name: 'سبک خود طرح' }, window.CLINIC_STYLES);
     fontSelect.addEventListener('change', () => select(fontSelect.value));
+    styleSelect.addEventListener('change', () => { selectedStyle = styleSelect.value; update(); });
 
     function select(fontId) {
       selectedFont = fontId;
-      fontSelect.value = fontId;
-      fontCards.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.font === fontId)));
-      themeLinks.forEach(({ a, theme }) => (a.href = `./?theme=${theme}${fontId ? `&font=${fontId}` : ''}`));
-      history.replaceState(null, '', fontId ? `?font=${fontId}` : location.pathname);
+      update();
     }
-    select(selectedFont);
+
+    function update() {
+      fontSelect.value = selectedFont;
+      styleSelect.value = selectedStyle;
+      fontCards.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.font === selectedFont)));
+      styleCards.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.style === selectedStyle)));
+      const extra = (selectedFont ? `&font=${selectedFont}` : '') + (selectedStyle ? `&style=${selectedStyle}` : '');
+      themeLinks.forEach(({ a, theme }) => (a.href = `./?theme=${theme}${extra}`));
+      history.replaceState(null, '', extra ? `?${extra.slice(1)}` : location.pathname);
+    }
+    update();
   </script>
 </body>
 </html>

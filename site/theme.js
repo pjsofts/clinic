@@ -20,6 +20,18 @@ window.CLINIC_THEMES = [
   { id: 'kids', name: 'کودکانه نرم', description: 'هلویی، نعناعی و یاسی پاستلی؛ بازیگوش اما حرفه‌ای، برای کودک و نوجوان' },
 ];
 
+// Design systems: button, nav bar, card and input styles (see design-systems.css). '' keeps the theme's own.
+window.CLINIC_STYLES = [
+  { id: 'pill', name: 'نرم و گرد', description: 'دکمه‌های کپسولی، منوی شفاف، کارت‌های سایه‌دار نرم' },
+  { id: 'rounded', name: 'گوشه‌گرد', description: 'گوشه‌های کمی گرد، منو با سایه، فیلدهای قاب‌دار' },
+  { id: 'sharp', name: 'مستطیلی', description: 'گوشه‌های تیز، خط زیر منو، فیلدهای خط‌دار' },
+  { id: 'outline', name: 'خطی', description: 'دکمه‌های توخالی، خط متحرک زیر لینک‌ها، کارت‌های بدون سایه' },
+  { id: 'floating', name: 'منوی شناور', description: 'منوی کپسولی معلق بالای صفحه، کارت‌های خیلی گرد' },
+  { id: 'bold', name: 'جسور', description: 'خط‌های ضخیم و سایه‌های سخت، منوی رنگی؛ امروزی و پرانرژی' },
+  { id: 'glass', name: 'شیشه‌ای', description: 'کارت‌ها و منوی مات شیشه‌ای روی هاله‌های رنگی' },
+  { id: 'classic', name: 'کلاسیک', description: 'لوگوی وسط، منوی جداکننده‌دار، تیترهای قاب‌دار' },
+];
+
 // Persian font pairings. `body` is used for text, `heading` for titles. All are free/open-licensed.
 (function () {
   var G = function (family) { return 'https://fonts.googleapis.com/css2?family=' + family + '&display=swap'; };
@@ -72,6 +84,12 @@ window.CLINIC_THEMES = [
   // Each theme layers its own stylesheet on top of the base styles.css.
   document.write('<link rel="stylesheet" href="themes/' + theme + '.css">');
 
+  // Design-system stylesheet loads after the theme so its scoped rules take priority.
+  document.write('<link rel="stylesheet" href="design-systems.css">');
+  var styleId = params.get('style') || window.CLINIC_DEFAULT_STYLE || '';
+  var style = window.CLINIC_STYLES.filter(function (st) { return st.id === styleId; })[0];
+  if (style) document.documentElement.dataset.style = style.id;
+
   // Optional font override (?font=...). Without one, the theme's own fonts are used.
   var fontId = params.get('font') || window.CLINIC_DEFAULT_FONT || '';
   var font = window.CLINIC_FONTS.filter(function (f) { return f.id === fontId; })[0];
@@ -100,9 +118,11 @@ window.CLINIC_THEMES = [
     }
     var themeSelect = makeSelect('انتخاب طرح', window.CLINIC_THEMES, theme);
     var fontSelect = makeSelect('انتخاب فونت', [{ id: '', name: 'فونت طرح' }].concat(window.CLINIC_FONTS), font ? font.id : '');
+    var styleSelect = makeSelect('انتخاب سبک', [{ id: '', name: 'سبک طرح' }].concat(window.CLINIC_STYLES), style ? style.id : '');
 
     function go() {
-      var query = '?theme=' + themeSelect.value + (fontSelect.value ? '&font=' + fontSelect.value : '');
+      var query = '?theme=' + themeSelect.value + (fontSelect.value ? '&font=' + fontSelect.value : '') +
+        (styleSelect.value ? '&style=' + styleSelect.value : '');
       location.search = query;
     }
 
@@ -118,7 +138,7 @@ window.CLINIC_THEMES = [
     var all = document.createElement('a');
     all.href = 'themes.html';
     all.textContent = 'همه طرح‌ها';
-    bar.append(group('طرح: ', themeSelect), group('فونت: ', fontSelect), all);
+    bar.append(group('طرح: ', themeSelect), group('فونت: ', fontSelect), group('سبک: ', styleSelect), all);
     document.body.append(bar);
   });
 })();
