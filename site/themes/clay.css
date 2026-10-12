@@ -1,0 +1,76 @@
+/* کاغذ و سفال — warm paper, clay rose and sage, light Amiri headings (palette from sarah-mousavi.github.io) */
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap");
+
+:root {
+  --bg: #f7f3ec;
+  --bg-alt: #f1ebe1;
+  --surface: #fbf8f3;
+  --text: #26221f;
+  --muted: #5a534d;
+  --primary: #9c5f56;
+  --primary-hover: #834e46;
+  --primary-soft: #f0e2dc;
+  --accent: #a86f67;
+  --border: #e4dccf;
+  --radius: 16px;
+  --shadow: 0 1px 2px #26221f0a, 0 16px 40px -24px #26221f38;
+  --header-bg: rgba(247, 243, 236, .85);
+  --hero-bg:
+    radial-gradient(circle at 8% 0%, rgba(168, 111, 103, .13), transparent 45%),
+    radial-gradient(circle at 100% 75%, rgba(126, 142, 119, .12), transparent 45%),
+    var(--bg);
+  --art-leaf: #a3b39b;
+  --notice-bg: #ecefe7;
+  --footer-bg: #26221f;
+  --footer-text: #bfb6ad;
+  --footer-strong: #f7f3ec;
+  --font: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+  --font-heading: "Amiri", "Noto Naskh Arabic", Georgia, serif;
+  --heading-weight: 400;
+}
+
+body { line-height: 2.1; }
+.site-header { backdrop-filter: blur(16px) saturate(1.2); border-bottom-color: var(--border); }
+.site-nav .btn-primary { background: var(--text); box-shadow: none; }
+.site-nav .btn-primary:hover { background: #332e2a; }
+
+/* Text-led hero, like an editorial cover */
+.hero { padding: clamp(48px, 7vw, 104px) 0 clamp(40px, 5vw, 72px); border-bottom: 1px solid var(--border); }
+.hero-inner { grid-template-columns: minmax(0, 760px); }
+.hero-art { display: none; }
+.hero h1 { font-size: clamp(2.3rem, 1.05rem + 3.9vw, 3.9rem); line-height: 1.7; }
+.eyebrow { color: #8f867e; font-weight: 500; font-size: .9rem; }
+.lead { color: var(--muted); }
+
+.btn { font-weight: 500; }
+.btn-primary { padding-inline: 2.2em; box-shadow: 0 14px 30px -16px rgba(131, 78, 70, .75); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 24px 46px -18px rgba(131, 78, 70, .7); }
+.btn-ghost { border: 1px solid #ded5c8; color: var(--text); }
+.btn-ghost:hover { background: transparent; border-color: var(--text); }
+
+/* Section titles with a thin clay rule */
+.section-head h2, .request-intro h2 { line-height: 1.7; font-size: clamp(1.9rem, 1.15rem + 2.6vw, 3rem); }
+.section-head h2::after, .request-intro h2::after {
+  content: ""; display: block; width: 56px; height: 1px; margin: .6em auto 0; background: var(--accent); opacity: .55;
+}
+.request-intro h2::after { margin-inline: 0; }
+h3 { font-family: var(--font); font-weight: 600; }
+
+/* Services as a numbered list with hairline dividers */
+.services { grid-template-columns: 1fr; gap: 0; counter-reset: svc; border-top: 1px solid var(--border); }
+.services .card {
+  counter-increment: svc; background: none; border: 0; border-bottom: 1px solid var(--border);
+  border-radius: 0; box-shadow: none; padding: 28px 8px;
+  display: grid; grid-template-columns: 48px 1fr; column-gap: 16px; align-items: baseline;
+}
+.services .card:hover { transform: none; box-shadow: none; background: rgba(168, 111, 103, .04); }
+.service-icon { width: auto; height: auto; background: none; margin: 0; font-size: 0; grid-row: span 2; }
+.service-icon::before { content: "۰" counter(svc, persian); font-size: .85rem; color: var(--accent); }
+.service h3 { font-family: var(--font-heading); font-weight: 400; font-size: 1.7rem; margin: 0; }
+.service p { grid-column: 2; }
+
+.avatar { background: #ecefe7; color: var(--primary); }
+.tags li { background: #ecefe7; }
+.chip[aria-pressed="true"] { background: var(--text); border-color: var(--text); }
+.step-num { background: none; color: var(--accent); border: 1px solid #d59a90; }
+.section-alt { background: var(--bg-alt); }

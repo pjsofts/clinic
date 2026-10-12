@@ -35,7 +35,7 @@ The site finds the API through `site/config.js` (`CLINIC_API_URL`).
 
 ## Themes
 
-Seventeen designs share the same content and form (ids listed in `site/theme.js`; `calm` is the default).
+Eighteen designs share the same content and form (ids listed in `site/theme.js`; `calm` is the default).
 
 - Gallery to send to the clinic: https://pjsofts.github.io/clinic/themes.html
 - Preview one directly: `https://pjsofts.github.io/clinic/?theme=night` (preview links show a theme switcher bar).
@@ -45,7 +45,7 @@ Seventeen designs share the same content and form (ids listed in `site/theme.js`
 
 ## Fonts
 
-Fourteen free Persian fonts / pairings (Vazirmatn, Estedad, Sahel, Shabnam, Samim, Gandom, IBM Plex Sans Arabic,
+Fifteen free Persian fonts / pairings (Vazirmatn, Estedad, Sahel, Shabnam, Samim, Gandom, IBM Plex Sans Arabic,
 Noto Sans Arabic, Parastoo, Noto Naskh, and heading pairings with Amiri, Nastaliq, Lalezar, Tanha) can be combined
 with any theme.
 

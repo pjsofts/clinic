@@ -16,6 +16,7 @@ window.CLINIC_THEMES = [
   { id: 'sky', name: 'ابر و آسمان', description: 'آبی آسمانی، سفید ابری و یاسی کم‌رنگ؛ سبک و پرهوا' },
   { id: 'matcha', name: 'چای سبز', description: 'سبز ماچا، بژ گرم و طلایی کدر؛ آرامش ذن و مدرن' },
   { id: 'candle', name: 'شمع و سایه', description: 'زغالی گرم، کهربایی و کرم؛ حس صمیمی اتاق درمان در شب' },
+  { id: 'clay', name: 'کاغذ و سفال', description: 'کاغذی گرم، گلبهی سفالی و سبز مریمی با تیترهای امیری؛ ادبی و آرام' },
   { id: 'kids', name: 'کودکانه نرم', description: 'هلویی، نعناعی و یاسی پاستلی؛ بازیگوش اما حرفه‌ای، برای کودک و نوجوان' },
 ];
 
@@ -36,6 +37,7 @@ window.CLINIC_THEMES = [
     { id: 'parastoo', name: 'پرستو', note: 'کتابی و ادبی', css: [R('parastoo-font@v2.0.1')], body: 'Parastoo', heading: 'Parastoo', weight: 700 },
     { id: 'naskh', name: 'نسخ', note: 'کلاسیک و رسمی', css: [G('Noto+Naskh+Arabic:wght@400;700')], body: 'Noto Naskh Arabic', heading: 'Noto Naskh Arabic', weight: 700 },
     { id: 'amiri', name: 'امیری + وزیرمتن', note: 'تیتر خوشنویسانه، متن مدرن', css: [VAZIR, G('Amiri:wght@700')], body: 'Vazirmatn', heading: 'Amiri', weight: 700 },
+    { id: 'amiri-light', name: 'امیری سبک + وزیرمتن', note: 'تیتر کتابی و سبک، مثل سایت دل‌آسای فعلی', css: [VAZIR, G('Amiri:wght@400')], body: 'Vazirmatn', heading: 'Amiri', weight: 400 },
     { id: 'nastaliq', name: 'نستعلیق + وزیرمتن', note: 'تیتر نستعلیق، اصیل و هنری', css: [VAZIR, G('Noto+Nastaliq+Urdu:wght@700')], body: 'Vazirmatn', heading: 'Noto Nastaliq Urdu', weight: 700 },
     { id: 'lalezar', name: 'لاله‌زار + وزیرمتن', note: 'تیتر پررنگ و نمایشی', css: [VAZIR, G('Lalezar')], body: 'Vazirmatn', heading: 'Lalezar', weight: 400 },
     { id: 'tanha', name: 'تنها + صمیم', note: 'تیتر ظریف و کشیده، متن آرام', css: [R('samim-font@v4.0.5'), R('tanha-font@0.10')], body: 'Samim', heading: 'Tanha', weight: 400 },
