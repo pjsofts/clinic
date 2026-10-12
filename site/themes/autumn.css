@@ -1,0 +1,35 @@
+/* پاییز — terracotta, olive and mustard */
+:root {
+  --bg: #fbf6ee;
+  --bg-alt: #f3eadb;
+  --surface: #fffdf9;
+  --text: #3a2a1d;
+  --muted: #76614f;
+  --primary: #b9562b;
+  --primary-hover: #9c4520;
+  --primary-soft: #f6e0d2;
+  --accent: #6b7b34;
+  --border: #e8dac4;
+  --shadow: 0 8px 26px rgba(91, 58, 30, .1);
+  --header-bg: rgba(251, 246, 238, .93);
+  --hero-bg:
+    radial-gradient(circle at 85% 15%, rgba(227, 168, 54, .25), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(107, 123, 52, .18), transparent 40%),
+    var(--bg);
+  --art-leaf: #e3a836;
+  --notice-bg: #f1f2e2;
+  --footer-bg: #3a2a1d;
+  --footer-text: #e3d3bf;
+  --footer-strong: #f5c35a;
+}
+
+.art-bg { fill: #f3e2c9; }
+.art-ring { stroke: var(--accent); }
+.eyebrow, .therapist .role { color: var(--accent); }
+.services .card:nth-child(1) .service-icon { background: #f6e0d2; }
+.services .card:nth-child(2) .service-icon { background: #ecefd8; }
+.services .card:nth-child(3) .service-icon { background: #fbecc8; }
+.services .card:nth-child(4) .service-icon { background: #efe1d6; }
+.tags li { background: #ecefd8; color: #4f5a24; }
+.step-num { background: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
