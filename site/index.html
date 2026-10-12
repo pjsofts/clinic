@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script src="theme.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
@@ -17,7 +19,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="دل آسا - صفحه اصلی">
-        <img src="logo.svg" alt="" width="40" height="40">
+        <svg class="logo" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+          <circle class="logo-bg" cx="32" cy="32" r="30"/>
+          <path class="logo-heart" d="M32 50c-1.5 0-17-10-17-22 0-6 4.3-10.5 9.8-10.5 3.2 0 5.7 1.6 7.2 3.9 1.5-2.3 4-3.9 7.2-3.9C44.7 17.5 49 22 49 28c0 12-15.5 22-17 22z"/>
+          <path class="logo-leaf" d="M32 41c0-9 4.5-15 11.5-16.8-.4 7.7-5 14-11.5 16.8z"/>
+        </svg>
         <span>
           <strong>دل آسا</strong>
           <small>کلینیک روانشناسی</small>
@@ -214,7 +220,11 @@
     <div class="container footer-grid">
       <div>
         <a href="#top" class="brand brand-footer">
-          <img src="logo.svg" alt="" width="36" height="36">
+          <svg class="logo" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+          <circle class="logo-bg" cx="32" cy="32" r="30"/>
+          <path class="logo-heart" d="M32 50c-1.5 0-17-10-17-22 0-6 4.3-10.5 9.8-10.5 3.2 0 5.7 1.6 7.2 3.9 1.5-2.3 4-3.9 7.2-3.9C44.7 17.5 49 22 49 28c0 12-15.5 22-17 22z"/>
+          <path class="logo-leaf" d="M32 41c0-9 4.5-15 11.5-16.8-.4 7.7-5 14-11.5 16.8z"/>
+        </svg>
           <strong>دل آسا</strong>
         </a>
         <p>کلینیک تخصصی روانشناسی و مشاوره</p>
@@ -239,7 +249,6 @@
     <p class="container copyright">© کلینیک روانشناسی دل آسا. تمامی حقوق محفوظ است.</p>
   </footer>
 
-  <script src="config.js"></script>
   <script src="app.js" defer></script>
 </body>
 </html>

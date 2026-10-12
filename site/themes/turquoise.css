@@ -1,0 +1,53 @@
+/* فیروزه — Persian heritage: turquoise, gold, geometric patterns */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;700&display=swap");
+
+:root {
+  --bg: #fdfbf6;
+  --bg-alt: #eef6f6;
+  --surface: #ffffff;
+  --text: #13303a;
+  --muted: #4f6870;
+  --primary: #0f7c86;
+  --primary-hover: #0b636b;
+  --primary-soft: #d6eeef;
+  --accent: #b58a2e;
+  --border: #d9cfb6;
+  --radius: 6px;
+  --shadow: 0 2px 0 var(--border);
+  --header-bg: rgba(253, 251, 246, .95);
+  --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%230f7c86' stroke-opacity='.12' stroke-width='1.5'%3E%3Cpath d='M40 6l9 25 25 9-25 9-9 25-9-25-25-9 25-9z'/%3E%3Cpath d='M16 16h48v48H16z' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E");
+  --hero-bg: var(--pattern), linear-gradient(180deg, #e7f3f3, var(--bg));
+  --art-leaf: #d9b45a;
+  --notice-bg: #fbf3e2;
+  --footer-bg: #0b4a50;
+  --footer-text: #cfe6e6;
+  --footer-strong: #f6e7bf;
+  --btn-radius: 6px;
+  --font-heading: "Noto Naskh Arabic", "Vazirmatn", serif;
+  --heading-weight: 700;
+}
+
+.site-header { border-bottom: 3px double var(--accent); }
+.section-alt { background: var(--pattern), var(--bg-alt); }
+.section-head h2::after,
+.request-intro h2::after {
+  content: ""; display: block; width: 90px; height: 10px; margin: 10px auto 0;
+  background:
+    radial-gradient(circle, var(--accent) 3px, transparent 4px) center / 18px 10px repeat-x;
+}
+.request-intro h2::after { margin-inline: 0; }
+.card { border-top: 4px solid var(--primary); }
+.service-icon, .avatar { border-radius: 50%; border: 2px solid var(--accent); }
+.step-num { position: relative; z-index: 0; background: none; color: #fff; }
+.step-num::before {
+  content: ""; position: absolute; inset: 6px; z-index: -1;
+  background: var(--accent); border-radius: 4px; transform: rotate(45deg);
+}
+.btn-ghost { border-color: var(--accent); color: var(--text); }
+.btn-ghost:hover { background: #fbf3e2; }
+.chip { border-radius: 4px; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+.tags li { border-radius: 4px; background: var(--primary-soft); }
+.art-bg { fill: #e3f1f1; }
+.art-ring { stroke: var(--accent); stroke-dasharray: none; stroke-width: 6; opacity: .6; }
+.hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); }

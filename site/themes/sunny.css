@@ -1,0 +1,52 @@
+/* آفتاب — warm, playful, rounded */
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+
+:root {
+  --bg: #fff8f1;
+  --bg-alt: #ffeede;
+  --surface: #ffffff;
+  --text: #3b2a24;
+  --muted: #7a6158;
+  --primary: #e2604a;
+  --primary-hover: #c94e39;
+  --primary-soft: #ffe0d6;
+  --accent: #2f9e8f;
+  --border: #f3dccb;
+  --radius: 28px;
+  --shadow: 0 12px 0 -6px #f6d2bd;
+  --header-bg: rgba(255, 248, 241, .94);
+  --hero-bg:
+    radial-gradient(circle at 10% 20%, #ffd9a8 0 120px, transparent 121px),
+    radial-gradient(circle at 92% 85%, #c7ece4 0 90px, transparent 91px),
+    linear-gradient(160deg, #ffe7d4, var(--bg) 70%);
+  --art-leaf: #ffc857;
+  --notice-bg: #e3f5f1;
+  --footer-bg: #3b2a24;
+  --footer-text: #f2ddd2;
+  --footer-strong: #ffc857;
+  --font-heading: "Lalezar", "Vazirmatn", sans-serif;
+  --heading-weight: 400;
+}
+
+.hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: 0; }
+.eyebrow {
+  display: inline-block; background: #fff; color: var(--accent);
+  padding: .2em 1em; border-radius: 999px; box-shadow: 0 4px 0 #f3dccb;
+}
+.btn-primary { box-shadow: 0 5px 0 #b8432f; }
+.btn-primary:active { box-shadow: 0 2px 0 #b8432f; transform: translateY(3px); }
+.card { border: 2px solid var(--border); }
+.services .card:nth-child(1) .service-icon { background: #ffe0d6; }
+.services .card:nth-child(2) .service-icon { background: #d8f1ec; }
+.services .card:nth-child(3) .service-icon { background: #fff0c2; }
+.services .card:nth-child(4) .service-icon { background: #e6e1ff; }
+.service-icon { border-radius: 50% 50% 50% 12px; transform: rotate(-6deg); }
+.avatar { border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%; background: #ffe0d6; color: var(--primary); }
+.step-num { background: var(--accent); border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%; width: 56px; height: 56px; }
+.section-alt { border-radius: 48px 48px 0 0; }
+.art-bg { fill: #ffd9c7; }
+.art-ring { stroke: var(--accent); stroke-width: 4; stroke-dasharray: 2 14; stroke-linecap: round; opacity: .8; }
+.notice { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+.tags li { background: #fff0c2; }
+.site-footer { border-radius: 48px 48px 0 0; }
