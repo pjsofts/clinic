@@ -1,0 +1,33 @@
+/* آبی پزشکی — crisp clinical blue and white */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f1f6fd;
+  --surface: #ffffff;
+  --text: #0f1f3d;
+  --muted: #56647d;
+  --primary: #1f5fd6;
+  --primary-hover: #174bb0;
+  --primary-soft: #e3edfc;
+  --accent: #0ea5d9;
+  --border: #dde6f3;
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(31, 95, 214, .08);
+  --header-bg: rgba(255, 255, 255, .95);
+  --hero-bg: linear-gradient(180deg, #f1f6fd, #ffffff);
+  --art-leaf: #7fd3f2;
+  --notice-bg: #fff4ec;
+  --footer-bg: #0f1f3d;
+  --footer-text: #b8c6de;
+  --footer-strong: #ffffff;
+  --btn-radius: 10px;
+}
+
+.site-header { box-shadow: 0 1px 0 var(--border); border-bottom: 0; }
+.hero-art svg { filter: drop-shadow(0 20px 40px rgba(31, 95, 214, .18)); }
+.art-bg { fill: #ffffff; }
+.art-ring { stroke: var(--primary); stroke-dasharray: none; stroke-width: 1.5; opacity: .25; }
+.eyebrow, .therapist .role { color: var(--accent); }
+.service-icon { background: var(--primary-soft); border-radius: 12px; }
+.card:hover { border-color: #bcd2f5; }
+.tags li { background: var(--primary-soft); color: #174bb0; }
+.chip { border-radius: 10px; }

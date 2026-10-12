@@ -1,0 +1,38 @@
+/* نیمه‌شب و نعناع — deep navy with fresh mint */
+:root {
+  --bg: #0b1a24;
+  --bg-alt: #0f222e;
+  --surface: #13293a;
+  --text: #e6f2f0;
+  --muted: #94aeb3;
+  --primary: #4fd1b5;
+  --primary-hover: #74e0c8;
+  --primary-soft: #183a3f;
+  --on-primary: #06231d;
+  --accent: #f4c97a;
+  --border: #1f3a4b;
+  --danger: #ff8f87;
+  --success: #6ee7b7;
+  --shadow: 0 12px 34px rgba(0, 0, 0, .35);
+  --header-bg: rgba(11, 26, 36, .88);
+  --hero-bg:
+    radial-gradient(circle at 18% 35%, rgba(79, 209, 181, .22), transparent 42%),
+    radial-gradient(circle at 90% 10%, rgba(244, 201, 122, .1), transparent 35%),
+    var(--bg);
+  --art-leaf: #f4c97a;
+  --notice-bg: #22293a;
+  --footer-bg: #07131b;
+  --footer-text: #94aeb3;
+  --footer-strong: #e6f2f0;
+  --input-bg: #0e2130;
+}
+
+body { color-scheme: dark; }
+.art-bg { fill: #12303a; }
+.art-ring { stroke: var(--primary); opacity: .6; }
+.art-heart { filter: drop-shadow(0 0 28px rgba(79, 209, 181, .45)); }
+.card { border-color: var(--border); }
+.tags li { background: var(--primary-soft); color: var(--primary); }
+.chip { background: transparent; color: var(--text); }
+.notice a { color: var(--accent); }
+.eyebrow { color: var(--accent); }

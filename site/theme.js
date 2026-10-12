@@ -9,6 +9,8 @@ window.CLINIC_THEMES = [
   { id: 'ocean', name: 'دریا', description: 'آبی عمیق و فیروزه‌ای روشن با موج؛ زلال و آرامش‌بخش' },
   { id: 'violet', name: 'بنفشه', description: 'گرادیان بنفش تا ارکیده؛ شاد، امروزی و پرانرژی' },
   { id: 'autumn', name: 'پاییز', description: 'آجری، زیتونی و خردلی؛ گرم، خاکی و صمیمی' },
+  { id: 'medical', name: 'آبی پزشکی', description: 'آبی و سفید روشن؛ تمیز، آشنا و کاملاً حرفه‌ای' },
+  { id: 'midnight', name: 'نیمه‌شب و نعناع', description: 'سرمه‌ای تیره با سبز نعناعی؛ لوکس، جسور و متمایز' },
 ];
 
 (function () {
