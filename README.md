@@ -43,6 +43,18 @@ Seventeen designs share the same content and form (ids listed in `site/theme.js`
 - Theme list/descriptions: `site/theme.js`. Each theme is `site/themes/<id>.css` (calm included), overriding the tokens at the top
   of `site/styles.css`. Gallery thumbnails live in `site/themes/previews/`.
 
+## Fonts
+
+Fourteen free Persian fonts / pairings (Vazirmatn, Estedad, Sahel, Shabnam, Samim, Gandom, IBM Plex Sans Arabic,
+Noto Sans Arabic, Parastoo, Noto Naskh, and heading pairings with Amiri, Nastaliq, Lalezar, Tanha) can be combined
+with any theme.
+
+- Preview: `https://pjsofts.github.io/clinic/?theme=turquoise&font=nastaliq` — the gallery page has a font picker
+  and samples of every font.
+- Pick the final font: set `CLINIC_DEFAULT_FONT` in `site/config.js` (`''` keeps the theme's own fonts).
+- Font list: `CLINIC_FONTS` in `site/theme.js`. Fonts load from Google Fonts or jsDelivr; Estedad's
+  `@font-face` is in `site/fonts/estedad.css`.
+
 ## Admin page
 
 `/clinic/admin/` — log in with the admin password. Lists call-back requests (newest first) with tap-to-call

@@ -266,8 +266,9 @@ textarea { resize: vertical; }
 
 .theme-bar {
   position: fixed; bottom: 16px; inset-inline-start: 50%; transform: translateX(50%); z-index: 60;
-  display: flex; align-items: center; gap: 10px; white-space: nowrap;
-  background: #1d1d1f; color: #fff; padding: 8px 10px 8px 16px; border-radius: 999px;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 10px; white-space: nowrap;
+  width: max-content; max-width: calc(100vw - 24px);
+  background: #1d1d1f; color: #fff; padding: 8px 16px; border-radius: 24px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, .25); font: 500 .9rem/1.5 "Vazirmatn", Tahoma, sans-serif;
 }
 .theme-bar select {
@@ -299,3 +300,10 @@ textarea { resize: vertical; }
   .reveal { opacity: 1; transform: none; }
   .btn:hover, .card:hover { transform: none !important; }
 }
+
+/* Nastaliq has very tall ascenders/descenders; give its headings room to breathe. */
+html[data-font="nastaliq"] .brand strong { line-height: 1.9; }
+html[data-font="nastaliq"] h1,
+html[data-font="nastaliq"] h2,
+html[data-font="nastaliq"] h3 { line-height: 1.9; }
+.theme-bar-group { display: inline-flex; align-items: center; gap: 6px; }

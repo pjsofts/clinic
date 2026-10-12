@@ -3,3 +3,6 @@ window.CLINIC_API_URL = 'https://del-asa-clinic.vercel.app';
 
 // Theme used when the URL has no ?theme= (see themes/ and themes.html).
 window.CLINIC_DEFAULT_THEME = 'calm';
+
+// Font used when the URL has no ?font= ('' = the theme's own fonts). Ids are listed in theme.js.
+window.CLINIC_DEFAULT_FONT = '';
