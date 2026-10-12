@@ -1,0 +1,50 @@
+/* Dana (FaNum) — commercial font by Moslem Ebrahimi / fontiran.com, used under the clinic's license.
+   The font files are served from the Vercel project and are not part of this repository. */
+@font-face {
+  font-family: "Dana";
+  src: url("https://del-asa-clinic.vercel.app/licensed-fonts/dana/DanaFaNum-UltraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana";
+  src: url("https://del-asa-clinic.vercel.app/licensed-fonts/dana/DanaFaNum-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana";
+  src: url("https://del-asa-clinic.vercel.app/licensed-fonts/dana/DanaFaNum-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana";
+  src: url("https://del-asa-clinic.vercel.app/licensed-fonts/dana/DanaFaNum-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana";
+  src: url("https://del-asa-clinic.vercel.app/licensed-fonts/dana/DanaFaNum-DemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana";
+  src: url("https://del-asa-clinic.vercel.app/licensed-fonts/dana/DanaFaNum-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana";
+  src: url("https://del-asa-clinic.vercel.app/licensed-fonts/dana/DanaFaNum-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana";
+  src: url("https://del-asa-clinic.vercel.app/licensed-fonts/dana/DanaFaNum-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}

@@ -27,6 +27,7 @@ window.CLINIC_THEMES = [
   var VAZIR = G('Vazirmatn:wght@400;500;700;800');
   window.CLINIC_FONTS = [
     { id: 'vazirmatn', name: 'وزیرمتن', note: 'مدرن، خوانا و همه‌کاره', css: [VAZIR], body: 'Vazirmatn', heading: 'Vazirmatn', weight: 800 },
+    { id: 'dana', name: 'دانا', note: 'مدرن و پرطرفدار در وب فارسی', css: ['fonts/dana.css'], body: 'Dana', heading: 'Dana', weight: 800 },
     { id: 'estedad', name: 'استعداد', note: 'هندسی و امروزی', css: ['fonts/estedad.css'], body: 'Estedad', heading: 'Estedad', weight: 800 },
     { id: 'sahel', name: 'ساحل', note: 'گرد و صمیمی', css: [R('sahel-font@v3.4.0')], body: 'Sahel', heading: 'Sahel', weight: 700 },
     { id: 'shabnam', name: 'شبنم', note: 'سبک و ظریف', css: [R('shabnam-font@v5.0.1')], body: 'Shabnam', heading: 'Shabnam', weight: 700 },

@@ -45,7 +45,7 @@ Eighteen designs share the same content and form (ids listed in `site/theme.js`;
 
 ## Fonts
 
-Fifteen free Persian fonts / pairings (Vazirmatn, Estedad, Sahel, Shabnam, Samim, Gandom, IBM Plex Sans Arabic,
+Sixteen Persian fonts / pairings (Dana — commercially licensed, files served from Vercel and kept out of git —, Vazirmatn, Estedad, Sahel, Shabnam, Samim, Gandom, IBM Plex Sans Arabic,
 Noto Sans Arabic, Parastoo, Noto Naskh, and heading pairings with Amiri, Nastaliq, Lalezar, Tanha) can be combined
 with any theme.
 

@@ -4,3 +4,6 @@ node_modules/
 .agents/
 .claude/
 skills-lock.json
+
+# Commercially licensed fonts: served from Vercel, never committed to this public repo
+licensed-fonts/
