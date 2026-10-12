@@ -1,0 +1,6 @@
+site
+.github
+README.md
+.agents/
+.claude/
+skills-lock.json

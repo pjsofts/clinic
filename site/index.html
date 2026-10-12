@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>کلینیک روانشناسی دل آسا</title>
+  <meta name="description" content="کلینیک روانشناسی دل آسا؛ مشاوره و روان‌درمانی حضوری و آنلاین با درمانگران مجرب. درخواست تماس برای رزرو نوبت.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="دل آسا - صفحه اصلی">
+        <img src="logo.svg" alt="" width="40" height="40">
+        <span>
+          <strong>دل آسا</strong>
+          <small>کلینیک روانشناسی</small>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="منو">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#services">خدمات</a>
+        <a href="#therapists">درمانگران</a>
+        <a href="#how">روند پذیرش</a>
+        <a href="#contact">تماس با ما</a>
+        <a href="#request" class="btn btn-primary btn-sm">درخواست نوبت</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">مشاوره و روان‌درمانی حضوری و آنلاین</p>
+          <h1>جایی برای آرام گرفتن دل</h1>
+          <p class="lead">
+            در دل آسا، درمانگران مجرب در فضایی امن و محرمانه کنار شما هستند تا با هم مسیر بهتر شدن را پیدا کنیم.
+            کافی است درخواست خود را ثبت کنید؛ همکاران ما برای هماهنگی نوبت با شما تماس می‌گیرند.
+          </p>
+          <div class="hero-actions">
+            <a href="#request" class="btn btn-primary">ثبت درخواست تماس</a>
+            <a href="#therapists" class="btn btn-ghost">آشنایی با درمانگران</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="150" class="art-bg"/>
+            <circle cx="160" cy="160" r="110" class="art-ring"/>
+            <path class="art-heart" d="M160 238c-6 0-74-44-74-98 0-26 19-46 43-46 14 0 25 7 31 17 6-10 17-17 31-17 24 0 43 20 43 46 0 54-68 98-74 98z"/>
+            <path class="art-leaf" d="M160 200c0-40 20-66 52-74-2 34-22 62-52 74z"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-head">
+          <h2>خدمات ما</h2>
+          <p>برای هر سن و هر دغدغه‌ای، همراهی متخصص و متناسب با شما</p>
+        </header>
+        <div class="grid services">
+          <article class="card service">
+            <div class="service-icon" aria-hidden="true">🌿</div>
+            <h3>مشاوره فردی</h3>
+            <p>اضطراب، افسردگی، استرس، عزت‌نفس و مسائل شخصی در جلسات فردی و محرمانه.</p>
+          </article>
+          <article class="card service">
+            <div class="service-icon" aria-hidden="true">🤝</div>
+            <h3>زوج و خانواده</h3>
+            <p>بهبود ارتباط، حل تعارض، مشاوره پیش از ازدواج و حمایت از خانواده.</p>
+          </article>
+          <article class="card service">
+            <div class="service-icon" aria-hidden="true">🧸</div>
+            <h3>کودک و نوجوان</h3>
+            <p>بازی‌درمانی، مشکلات رفتاری و تحصیلی، و راهنمایی والدین در فرزندپروری.</p>
+          </article>
+          <article class="card service">
+            <div class="service-icon" aria-hidden="true">💻</div>
+            <h3>مشاوره آنلاین</h3>
+            <p>جلسات تصویری امن برای کسانی که امکان حضور در کلینیک را ندارند.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="therapists">
+      <div class="container">
+        <header class="section-head">
+          <h2>درمانگران دل آسا</h2>
+          <p>درمانگر مورد نظرتان را انتخاب کنید یا انتخاب را به ما بسپارید</p>
+        </header>
+        <div class="filters" id="therapist-filters" role="group" aria-label="فیلتر بر اساس تخصص"></div>
+        <div class="grid therapists" id="therapist-list" aria-live="polite">
+          <p class="muted">در حال بارگذاری…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <header class="section-head">
+          <h2>روند پذیرش</h2>
+          <p>سه قدم ساده تا اولین جلسه</p>
+        </header>
+        <ol class="steps">
+          <li>
+            <span class="step-num">۱</span>
+            <h3>ثبت درخواست</h3>
+            <p>فرم کوتاه زیر را پر کنید. اگر درمانگر خاصی مد نظرتان است، انتخابش کنید.</p>
+          </li>
+          <li>
+            <span class="step-num">۲</span>
+            <h3>تماس منشی</h3>
+            <p>همکاران ما معمولاً ظرف یک روز کاری با شما تماس می‌گیرند تا زمان مناسب را هماهنگ کنند.</p>
+          </li>
+          <li>
+            <span class="step-num">۳</span>
+            <h3>اولین جلسه</h3>
+            <p>در کلینیک یا به‌صورت آنلاین، گفت‌وگو با درمانگرتان را آغاز می‌کنید.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="request">
+      <div class="container request-wrap">
+        <div class="request-intro">
+          <h2>درخواست تماس برای رزرو نوبت</h2>
+          <p>اطلاعات شما محرمانه است و فقط برای هماهنگی نوبت استفاده می‌شود.</p>
+          <div class="notice" role="note">
+            <strong>در شرایط اضطراری</strong>
+            اگر شما یا اطرافیانتان در خطر فوری هستید، منتظر تماس ما نمانید و با
+            <a href="tel:123">اورژانس اجتماعی ۱۲۳</a>،
+            <a href="tel:1480">صدای مشاور ۱۴۸۰</a>
+            یا <a href="tel:115">اورژانس ۱۱۵</a> تماس بگیرید.
+          </div>
+        </div>
+
+        <form class="card request-form" id="request-form" novalidate>
+          <div class="field">
+            <label for="name">نام و نام خانوادگی</label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required>
+            <p class="field-error" data-error-for="name"></p>
+          </div>
+
+          <div class="field">
+            <label for="phone">شماره تماس</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="09123456789" required>
+            <p class="field-error" data-error-for="phone"></p>
+          </div>
+
+          <div class="field">
+            <label for="therapistId">درمانگر</label>
+            <select id="therapistId" name="therapistId">
+              <option value="">فرقی نمی‌کند / کمکم کنید انتخاب کنم</option>
+            </select>
+          </div>
+
+          <fieldset class="field">
+            <legend>نوع جلسه</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="sessionType" value="in-person" checked> حضوری</label>
+              <label class="choice"><input type="radio" name="sessionType" value="online"> آنلاین</label>
+            </div>
+            <p class="field-error" data-error-for="sessionType"></p>
+          </fieldset>
+
+          <div class="field">
+            <label for="preferredTime">زمان مناسب برای جلسه</label>
+            <select id="preferredTime" name="preferredTime">
+              <option value="any">فرقی نمی‌کند</option>
+              <option value="morning">صبح (۸ تا ۱۲)</option>
+              <option value="afternoon">بعدازظهر (۱۲ تا ۱۶)</option>
+              <option value="evening">عصر (۱۶ تا ۲۰)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">توضیحات <span class="muted">(اختیاری)</span></label>
+            <textarea id="message" name="message" rows="3" maxlength="1000" placeholder="اگر مایلید، به‌طور خلاصه بنویسید برای چه موضوعی مراجعه می‌کنید."></textarea>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label for="website">وب‌سایت</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label class="choice consent">
+              <input type="checkbox" name="consent" required>
+              موافقم که کلینیک دل آسا برای هماهنگی نوبت با من تماس بگیرد.
+            </label>
+            <p class="field-error" data-error-for="consent"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">ثبت درخواست</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand brand-footer">
+          <img src="logo.svg" alt="" width="36" height="36">
+          <strong>دل آسا</strong>
+        </a>
+        <p>کلینیک تخصصی روانشناسی و مشاوره</p>
+      </div>
+      <div>
+        <h3>تماس با ما</h3>
+        <ul class="plain">
+          <li>تلفن: <a href="tel:02100000000" dir="ltr">۰۲۱-۰۰۰۰۰۰۰۰</a></li>
+          <li>نشانی: تهران، خیابان نمونه، پلاک ۰</li>
+          <li>ساعات کاری: شنبه تا پنج‌شنبه، ۸ تا ۲۰</li>
+        </ul>
+      </div>
+      <div>
+        <h3>خطوط اضطراری</h3>
+        <ul class="plain">
+          <li>اورژانس اجتماعی: <a href="tel:123">۱۲۳</a></li>
+          <li>صدای مشاور بهزیستی: <a href="tel:1480">۱۴۸۰</a></li>
+          <li>اورژانس پزشکی: <a href="tel:115">۱۱۵</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="container copyright">© کلینیک روانشناسی دل آسا. تمامی حقوق محفوظ است.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
